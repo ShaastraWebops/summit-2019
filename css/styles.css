@@ -1,0 +1,59 @@
+.nav-link {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-variant: small-caps;
+  font-size: 20px;
+  color: #67d0a3;
+  padding: 20px;
+}
+
+.big-logo {
+  height: 150px;
+  width: auto;
+}
+
+body {
+  height: 250vh;
+  background: #2b1950;
+  color: white;
+}
+
+.big-logo-div {
+  background: #67d0a3;
+}
+
+.nav-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a:hover {
+  color: #67d0a3;
+}
+
+.nav-item:hover {
+  border-bottom: 3px solid #67d0a3;
+}
+.nav-item {
+  border-bottom: 3px solid #23103d;
+  height: 70px;
+}
+.fab {
+  font-size: 16px;
+}
+
+.small-logo {
+  height: 70px;
+  padding: 0%;
+}
+
+.nav-head {
+  height: 80px;
+  background: #23103d;
+  box-shadow: #67d0a3 0px 1px 6px 1px;
+}
+
+.social {
+  padding-bottom: 27px;
+  padding-top: 27px;
+}
