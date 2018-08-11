@@ -22,22 +22,25 @@ body {
   background: #67d0a3;
 }
 
-.nav-item {
+.lg-nav-item {
   padding-left: 5px;
   padding-right: 5px;
 }
 
 a:hover {
+  text-decoration: none;
   color: #67d0a3;
 }
 
-.nav-item:hover {
+.lg-nav-item:hover {
   border-bottom: 3px solid #67d0a3;
 }
-.nav-item {
+
+.lg-nav-item {
   border-bottom: 3px solid #23103d;
   height: 70px;
 }
+
 .fab {
   font-size: 16px;
 }
@@ -56,4 +59,35 @@ a:hover {
 .social {
   padding-bottom: 27px;
   padding-top: 27px;
+}
+
+.fas {
+  font-size: 25px;
+  color: #67d0a3;
+}
+
+.side-nav {
+  width: 50vw;
+  height: 100vh;
+  background-color: #67d0a3;
+  position: fixed;
+}
+
+#sidebarNav {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  background: #23103d;
+}
+
+.nav-pills .nav-link.nav-item {
+  border-radius: 0%;
+}
+
+.sm-nav-item {
+  border-bottom: 3px solid #23103d;
+}
+
+.sm-nav-item:hover {
+  border-bottom: 3px solid #67d0a3;
 }

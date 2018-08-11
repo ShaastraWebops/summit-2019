@@ -2,6 +2,7 @@
 	<img src="img/summit1.png" class="big-logo">
 </center>
 
+<!-- Navbar for viewport > sm -->
 <nav class="navbar navbar-expand-sm justify-content-center sticky-top nav-head">
 	<div class="container">
 		<div class="col-lg-2 d-none d-lg-block">
@@ -14,19 +15,19 @@
 		<div class="col-lg-8 col-md-12 col-sm-12">
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100">
 				<ul class="navbar-nav mx-auto text-center">
-					<li class="nav-item active">
+					<li class="nav-item active lg-nav-item">
 						<a href="#" ui-sref="home" class="nav-link">home</a>
 					</li>
-					<li class="nav-item ">
+					<li class="nav-item lg-nav-item">
 						<a href="#" ui-sref="about" class="nav-link">about</a>
 					</li>
-					<li class="nav-item ">
+					<li class="lg-nav-item nav-item ">
 						<a href="#" ui-sref="editions" class="nav-link">editions</a>
 					</li>
-					<li class="nav-item ">
+					<li class="lg-nav-item nav-item ">
 						<a href="#" ui-sref="registrations" class="nav-link">registrations</a>
 					</li>
-					<li class="nav-item ">
+					<li class="nav-item lg-nav-item">
 						<a href="#" ui-sref="contact" class="nav-link">contact</a>
 					</li>
 				</ul>
@@ -54,6 +55,43 @@
 			</div>
 		</div>
 
-		<div></div>
+		<div class="col-xs-2 d-sm-none">
+			<button class="btn bg-transparent" onclick="toggleSideBar();">
+				<span class="fas fa-bars"></span>
+			</button>
+		</div>
+		<div class="col-xs-8 d-sm-none">
+			<img src="img/summit2.png" class="small-logo">
+		</div>
+		<div class="col-xs-2 d-sm-none">
+			<span class="fas fa-search"></span>
+		</div>
 	</div>
 </nav>
+
+<!-- Navbar and SideBar for viewport < sm -->
+<nav id="sidebarNav" class="d-none">
+	<ul class="nav flex-column nav-pills " role="tablist " aria-orientation="vertical ">
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="true">
+			<a href="# " ui-sref="home " class="nav-link" onclick="toggleSideBar();">home</a>
+		</li>
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
+			<a href="#" ui-sref="about" class="nav-link" onclick="toggleSideBar();">about</a>
+		</li>
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
+			<a href="#" ui-sref="editions" class="nav-link" onclick="toggleSideBar();">editions</a>
+		</li>
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
+			<a href="#" ui-sref="registrations" class="nav-link" onclick="toggleSideBar();">registrations</a>
+		</li>
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
+			<a href="#" ui-sref="contact" class="nav-link" onclick="toggleSideBar();">contact</a>
+		</li>
+	</ul>
+</nav>
+
+<script>
+	function toggleSideBar() {
+		$('#sidebarNav').toggleClass('d-none');
+	}
+</script>
