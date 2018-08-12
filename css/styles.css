@@ -12,12 +12,6 @@
   width: auto;
 }
 
-body {
-  height: 250vh;
-  background: #2b1950;
-  color: white;
-}
-
 .big-logo-div {
   background: #67d0a3;
 }
@@ -90,4 +84,34 @@ a:hover {
 
 .sm-nav-item:hover {
   border-bottom: 3px solid #67d0a3;
+}
+
+.main-card {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Montserrat";
+  color: #67d0a3;
+  width: 50%;
+  padding: 10% 0;
+}
+
+.banner {
+  height: 700px;
+  background: url("../img/sports2.jpeg") top center no-repeat no-repeat;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.subtitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.tint {
+  height: inherit;
+  padding: 5% 0;
+  background-color: rgba(35, 16, 61, 0.7);
 }
