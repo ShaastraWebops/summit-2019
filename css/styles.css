@@ -8,12 +8,13 @@
 }
 
 .big-logo {
-  height: 150px;
+  height: 8vw;
   width: auto;
 }
 
 .big-logo-div {
   background: #67d0a3;
+  height: inherit;
 }
 
 .lg-nav-item {
@@ -114,4 +115,48 @@ a:hover {
   height: inherit;
   padding: 5% 0;
   background-color: rgba(35, 16, 61, 0.7);
+}
+
+.card-custom-small {
+  width: 300px;
+  align-items: center;
+}
+
+body {
+  background-color: #2b1950;
+}
+
+.page-heading {
+  font-weight: 700;
+  font-size: 6vw;
+  text-align: center;
+  color: #23103d;
+}
+
+.main-heading {
+  font-weight: 700;
+  font-size: 48px;
+  color: #67d0a3;
+  margin-top: 10px;
+}
+
+.custom-card-text {
+  font-weight: 400;
+  font-size: 20px;
+  color: #23103d;
+}
+
+.custom-border-radius {
+  border-radius: 15px;
+}
+
+.custom-card-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.demo-square {
+  height: 300px;
+  width: 100%;
+  background-color: #23103d;
 }
