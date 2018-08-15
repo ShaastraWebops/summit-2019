@@ -91,3 +91,7 @@ a:hover {
 .sm-nav-item:hover {
   border-bottom: 3px solid #67d0a3;
 }
+
+.contact-image {
+  padding: 10px;
+}
