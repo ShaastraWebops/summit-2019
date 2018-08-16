@@ -12,18 +12,23 @@
 				templateUrl: 'views/home.html',
 			})
 			.state('about', {
+				url: '/about',
 				templateUrl: 'views/about.html',
 			})
 			.state('contact', {
+				url: '/contact',
 				templateUrl: 'views/contact.html'
 			})
 			.state('registrations', {
+				url: '/registrations',
 				templateUrl: 'views/registrations.html'
 			})
 			.state('summit2019', {
+				url: '/summit2019',
 				templateUrl: 'views/summit.html'
 			})
 			.state('editions', {
+				url: '/editions',
 				templateUrl: 'views/editions.html'
 			});
 	}

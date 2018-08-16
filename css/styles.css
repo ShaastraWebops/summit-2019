@@ -1,5 +1,4 @@
 .nav-link {
-  font-family: Montserrat;
   font-weight: 800;
   font-variant: small-caps;
   font-size: 20px;
@@ -90,8 +89,6 @@ a:hover {
 .main-card {
   display: table-cell;
   vertical-align: middle;
-  font-family: "Montserrat";
-  color: #67d0a3;
   width: 50%;
   padding: 10% 0;
 }
@@ -103,18 +100,32 @@ a:hover {
 
 .title {
   font-weight: 900;
+  color: #67d0a3;
   font-size: 60px;
 }
 
 .subtitle {
   font-size: 36px;
+  color: #67d0a3;
   font-weight: 600;
+}
+
+.title2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #67d0a3;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+  color: #23103d;
 }
 
 .tint {
   height: inherit;
   padding: 5% 0;
-  background-color: rgba(35, 16, 61, 0.7);
+  background-color: rgba(35, 16, 61, 0.5);
 }
 
 .card-custom-small {
@@ -124,6 +135,7 @@ a:hover {
 
 body {
   background-color: #2b1950;
+  font-family: "Montserrat";
 }
 
 .page-heading {
@@ -133,30 +145,31 @@ body {
   color: #23103d;
 }
 
-.main-heading {
-  font-weight: 700;
-  font-size: 48px;
-  color: #67d0a3;
-  margin-top: 10px;
-}
-
-.custom-card-text {
-  font-weight: 400;
-  font-size: 20px;
-  color: #23103d;
-}
-
 .custom-border-radius {
   border-radius: 15px;
 }
 
-.custom-card-margin {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.demo-square {
+.demo-square-short {
   height: 300px;
   width: 100%;
   background-color: #23103d;
+}
+
+.demo-square-tall {
+  height: 500px;
+  widows: 100%;
+  background: #23103d;
+}
+
+.word-div {
+  height: 300px;
+  text-align: center;
+}
+
+.bg-purple {
+  background: #2b1950;
+}
+
+.bg-green {
+  background: #67d0a3;
 }
