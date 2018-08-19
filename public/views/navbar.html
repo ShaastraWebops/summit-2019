@@ -1,71 +1,37 @@
-<div class="big-logo-div">
-	<center>
-		<img src="../img/summit1.png" alt="logo" class="big-logo">
-	</center>
-</div>
 <!-- Navbar for viewport > sm -->
-<nav class="navbar navbar-expand-sm justify-content-center sticky-top nav-head">
-	<div class="container">
-		<div class="col-lg-2 d-none d-lg-block">
-			<div class="justify-content-between align-items-center">
-				<a class="navbar-brand" href="#" ui-sref="summit2019">
-					<img src="img/summit2.png" class="small-logo">
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-8 col-md-12 col-sm-12">
-			<div class="navbar-collapse collapse justify-content-between align-items-center w-100">
-				<ul class="navbar-nav mx-auto text-center">
-					<li class="nav-item active lg-nav-item" ng-click="mCtrl.go('home');">
-						<a href="" class="nav-link">home</a>
-					</li>
-					<li class="nav-item lg-nav-item" ng-click="mCtrl.go('about');">
-						<a href="" class="nav-link ">about</a>
-					</li>
-					<li class="lg-nav-item nav-item " ng-click="mCtrl.go('editions');">
-						<a href="" class="nav-link">editions</a>
-					</li>
-					<li class="lg-nav-item nav-item " ng-click="mCtrl.go('registrations');">
-						<a href="" class="nav-link ">registrations</a>
-					</li>
-					<li class="nav-item lg-nav-item " ng-click="mCtrl.go('contact');">
-						<a href="" class="nav-link">contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-lg-2 d-none d-lg-block">
-			<div class="navbar-collapse collapse justify-content-between align-items-center w-100">
-				<ul class="navbar-nav mx-auto text-center">
-					<li class="nav-item">
-						<a class="nav-link social" href="https://twitter.com/shaastraiitm" target="_blank">
-							<span class="fab fa-twitter"></span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link social" href="https://facebook.com/Shaastra" target="_blank">
-							<span class="fab fa-facebook-f"></span>
-						</a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link social" href="https://linkedin.com/company/shaastraiitmadras" target="_blank">
-							<span class="fab fa-linkedin-in"></span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
 
-		<div class="col-xs-2 d-sm-none">
-			<button class="btn bg-transparent" onclick="toggleSideBar();">
+<nav class="navbar navbar-expand-lg nav-head">
+	<div class="container">
+		<div class="d-lg-none">
+			<button class="navbar-toggler" type="button" onClick="toggleSideBar();">
 				<span class="fas fa-bars"></span>
 			</button>
 		</div>
-		<div class="col-xs-8 d-sm-none">
-			<img src="img/summit2.png" class="small-logo">
+		<div class="navbar-brand">
+			<img src="../img/summit2.png" class="small-logo" alt="SMALL LOGO">
 		</div>
-		<div class="col-xs-2 d-sm-none">
-			<span class="fas fa-search"></span>
+
+		<div class="d-none d-lg-block">
+			<ul class="navbar-nav float-right">
+				<li class="nav-item lg-nav-item" onClick="goTo('home');">
+					<a href="#" class="nav-link">home</a>
+				</li>
+				<li class="nav-item lg-nav-item" onClick="goTo('about');">
+					<a href="#" class="nav-link">about</a>
+				</li>
+				<li class="nav-item lg-nav-item" onClick="goTo('editions');">
+					<a href="" class="nav-link">past editions</a>
+				</li>
+				<li class="nav-item lg-nav-item" onClick="goTo('summit');">
+					<a href="#" class="nav-link">the summit</a>
+				</li>
+				<li class="nav-item lg-nav-item" onClick="goTo('registrations');">
+					<a href="#" class="nav-link">regsitrations</a>
+				</li>
+				<li class="nav-item lg-nav-item" onClick="goTo('contact');">
+					<a href="#" class="nav-link">contact</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>
@@ -74,25 +40,22 @@
 <nav id="sidebarNav" class="d-none">
 	<ul class="nav flex-column nav-pills " role="tablist " aria-orientation="vertical ">
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="true">
-			<a href="# " ui-sref="home " class="nav-link" onclick="toggleSideBar();">home</a>
+			<a href="# " ui-sref="home " class="nav-link" onclick="toggleSideBar(); goTo('home');">home</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
-			<a href="#" ui-sref="about" class="nav-link" onclick="toggleSideBar();">about</a>
+			<a href="#" ui-sref="about" class="nav-link" onclick="toggleSideBar(); goTo('about');">about</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
-			<a href="#" ui-sref="editions" class="nav-link" onclick="toggleSideBar();">editions</a>
+			<a href="" ui-sref="editions" class="nav-link" onclick="toggleSideBar(); goTo('editions');">past editions</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
-			<a href="#" ui-sref="registrations" class="nav-link" onclick="toggleSideBar();">registrations</a>
+			<a href="" ui-sref="editions" class="nav-link" onclick="toggleSideBar(); goTo('summit');">the summit</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
-			<a href="#" ui-sref="contact" class="nav-link" onclick="toggleSideBar();">contact</a>
+			<a href="#" ui-sref="registrations" class="nav-link" onclick="toggleSideBar(); goTo('registrations');">registrations</a>
+		</li>
+		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
+			<a href="#" ui-sref="contact" class="nav-link" onclick="toggleSideBar(); goTo('contact');">contact</a>
 		</li>
 	</ul>
 </nav>
-
-<script>
-	function toggleSideBar() {
-		$('#sidebarNav').toggleClass('d-none');
-	}
-</script>

@@ -1,175 +1,211 @@
 .nav-link {
-  font-weight: 800;
-  font-variant: small-caps;
-  font-size: 20px;
-  color: #67d0a3;
-  padding: 20px;
+    font-weight: 800;
+    font-variant: small-caps;
+    font-size: 20px;
+    color: #67d0a3;
+    padding: 20px;
 }
 
 .big-logo {
-  height: 8vw;
-  width: auto;
+	padding-top: 25px;
+    height: 150px;
+    width: auto;
 }
 
 .big-logo-div {
-  background: #67d0a3;
-  height: inherit;
+    background: #67d0a3;
+    height: inherit;
 }
 
 .lg-nav-item {
-  padding-left: 5px;
-  padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 a:hover {
-  text-decoration: none;
-  color: #67d0a3;
+    text-decoration: none;
+    color: #67d0a3;
 }
 
 .lg-nav-item:hover {
-  border-bottom: 3px solid #67d0a3;
+    border-bottom: 3px solid #67d0a3;
 }
 
 .lg-nav-item {
-  border-bottom: 3px solid #23103d;
-  height: 70px;
+    border-bottom: 3px solid #23103d;
+    height: 70px;
 }
 
 .fab {
-  font-size: 16px;
+    font-size: 20px;
+	padding-right: 5px;
 }
 
 .small-logo {
-  height: 70px;
-  padding: 0%;
+    height: 70px;
+    padding: 0%;
 }
 
 .nav-head {
-  height: 80px;
-  background: #23103d;
-  box-shadow: #67d0a3 0px 1px 6px 1px;
+    height: 80px;
+    background: #23103d;
+    box-shadow: #67d0a3 0px 1px 6px 1px;
 }
 
 .social {
-  padding-bottom: 27px;
-  padding-top: 27px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.social a{
+	color: #67d0a3;
 }
 
 .fas {
-  font-size: 25px;
-  color: #67d0a3;
-}
-
-.side-nav {
-  width: 50vw;
-  height: 100vh;
-  background-color: #67d0a3;
-  position: fixed;
+    font-size: 25px;
+    color: #67d0a3;
 }
 
 #sidebarNav {
-  width: 50%;
-  height: 100vh;
-  position: fixed;
-  background: #23103d;
+    height: 100vh;
+    position: fixed;
+    background: #23103d;
 }
 
 .nav-pills .nav-link.nav-item {
-  border-radius: 0%;
+    border-radius: 0%;
 }
 
 .sm-nav-item {
-  border-bottom: 3px solid #23103d;
+    border-bottom: 3px solid #23103d;
+	margin-left: 10vw;
+	margin-right: 5vw
 }
 
 .sm-nav-item:hover {
-  border-bottom: 3px solid #67d0a3;
+    border-bottom: 3px solid #67d0a3;
 }
 
 .main-card {
-  display: table-cell;
-  vertical-align: middle;
-  width: 50%;
-  padding: 10% 0;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 10% 0;
 }
 
 .banner {
-  height: 700px;
-  background: url("../img/sports2.jpeg") top center no-repeat no-repeat;
+    height: 700px;
+    background: url('../img/sports2.jpeg') top center no-repeat no-repeat;
 }
 
 .title {
-  font-weight: 900;
-  color: #67d0a3;
-  font-size: 60px;
+    font-weight: 900;
+    color: #67d0a3;
+    font-size: 60px;
 }
 
 .subtitle {
-  font-size: 36px;
-  color: #67d0a3;
-  font-weight: 600;
+    font-size: 36px;
+    color: #67d0a3;
+    font-weight: 600;
 }
 
 .title2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #67d0a3;
+    font-size: 48px;
+    font-weight: 700;
+    color: #67d0a3;
 }
 
 .text {
-  font-size: 20px;
-  font-weight: 400;
-  color: #23103d;
+    font-size: 20px;
+    font-weight: 400;
+    color: #23103d;
 }
 
 .tint {
-  height: inherit;
-  padding: 5% 0;
-  background-color: rgba(35, 16, 61, 0.5);
+    height: inherit;
+    padding: 5% 0;
+    background-color: rgba(35, 16, 61, 0.5);
 }
 
 .card-custom-small {
-  width: 300px;
-  align-items: center;
+    width: 300px;
+    align-items: center;
 }
 
 body {
-  background-color: #2b1950;
-  font-family: "Montserrat";
+    padding-top: 80px;
+    background-color: #2b1950;
+    font-family: 'Montserrat';
 }
 
 .page-heading {
-  font-weight: 700;
-  font-size: 6vw;
-  text-align: center;
-  color: #23103d;
+    font-weight: 700;
+    font-size: 6vw;
+    text-align: center;
+    color: #23103d;
 }
 
 .custom-border-radius {
-  border-radius: 15px;
+    border-radius: 15px;
 }
 
 .demo-square-short {
-  height: 300px;
-  width: 100%;
-  background-color: #23103d;
+    height: 300px;
+    width: 100%;
+    background-color: #23103d;
 }
 
 .demo-square-tall {
-  height: 500px;
-  widows: 100%;
-  background: #23103d;
-}
-
-.word-div {
-  height: 300px;
-  text-align: center;
+    height: 500px;
+    widows: 100%;
+    background: #23103d;
 }
 
 .bg-purple {
-  background: #2b1950;
+    background: #2b1950;
 }
 
 .bg-green {
-  background: #67d0a3;
+    background: #67d0a3;
+}
+
+.tx-green {
+    color: #67d0a3;
+}
+
+.tx-purple {
+    color: #23103d;
+}
+
+.word {
+    float: right;
+    font-size: 6vh;
+    font-weight: 900;
+}
+
+.word-col {
+    border-right: solid 4px #67d0a3;
+}
+
+.sentence {
+    padding-top: 0.5vh;
+}
+
+.reg-div{
+	min-height: 60vh;
+	padding-top: 15vh;
+}
+
+.footer{
+	height: 200px;
+}
+
+.footer-text{
+	font-weight: 600;
+}
+
+.footer-info{
+	padding-top: 25px;
+	padding-bottom: 25px;
 }

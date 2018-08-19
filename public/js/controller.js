@@ -1,13 +1,26 @@
 (function () {
-	angular.module('summit-2019')
+	angular
+		.module('summit-2019')
+		.run(AnchorScrollFunc)
 		.controller('mainCtrl', MainControllerFunc);
 
-	MainControllerFunc.$inject = ['$state'];
+	AnchorScrollFunc.$inject = ['$anchorScroll'];
 
-	function MainControllerFunc($state) {
+	function AnchorScrollFunc($anchorScroll) {
+		$anchorScroll.yOffset = 50;
+	}
+
+	MainControllerFunc.$inject = ['$location', '$anchorScroll'];
+
+	function MainControllerFunc($anchorScroll, $location) {
 		var mCtrl = this;
 		mCtrl.go = function (stateName) {
-			$state.go(stateName);
+			$location
+			console.log('====================================');
+			console.log($location.hash);
+			console.log('====================================');
+			$location.hash('#' + stateName);
+			$anchorScroll(stateName);
 		};
 	}
 })();
