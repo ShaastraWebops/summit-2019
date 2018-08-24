@@ -2,7 +2,7 @@
     font-weight: 800;
     font-variant: small-caps;
     font-size: 20px;
-    color: #67d0a3;
+    color: #be202e;
     padding: 20px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .big-logo-div {
-    background: #67d0a3;
+    background: #be202e;
     height: inherit;
 }
 
@@ -24,15 +24,15 @@
 
 a:hover {
     text-decoration: none;
-    color: #67d0a3;
+    color: #be202e;
 }
 
 .lg-nav-item:hover {
-    border-bottom: 3px solid #67d0a3;
+    border-bottom: 3px solid #be202e;
 }
 
 .lg-nav-item {
-    border-bottom: 3px solid #23103d;
+    border-bottom: 3px solid #030303;
     height: 70px;
 }
 
@@ -43,13 +43,14 @@ a:hover {
 
 .small-logo {
     height: 70px;
-    padding: 0%;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .nav-head {
     height: 80px;
-    background: #23103d;
-    box-shadow: #67d0a3 0px 1px 6px 1px;
+    background: #030303;
+    box-shadow: #be202e 0px 1px 6px 1px;
 }
 
 .social {
@@ -58,18 +59,18 @@ a:hover {
 }
 
 .social a{
-	color: #67d0a3;
+	color: #be202e;
 }
 
 .fas {
     font-size: 25px;
-    color: #67d0a3;
+    color: #be202e;
 }
 
 #sidebarNav {
     height: 100vh;
     position: fixed;
-    background: #23103d;
+    background: #030303;
 }
 
 .nav-pills .nav-link.nav-item {
@@ -77,13 +78,13 @@ a:hover {
 }
 
 .sm-nav-item {
-    border-bottom: 3px solid #23103d;
+    border-bottom: 3px solid #030303;
 	margin-left: 10vw;
 	margin-right: 5vw
 }
 
 .sm-nav-item:hover {
-    border-bottom: 3px solid #67d0a3;
+    border-bottom: 3px solid #be202e;
 }
 
 .main-card {
@@ -93,39 +94,40 @@ a:hover {
     padding: 10% 0;
 }
 
-.banner {
-    height: 700px;
-    background: url('../img/sports2.jpeg') top center no-repeat no-repeat;
+.banner{
+	width: 100vw;
+	height: auto;
 }
 
 .title {
     font-weight: 900;
-    color: #67d0a3;
+    color: #be202e;
     font-size: 60px;
 }
 
 .subtitle {
     font-size: 36px;
-    color: #67d0a3;
+    color: #be202e;
     font-weight: 600;
 }
 
 .title2 {
     font-size: 48px;
     font-weight: 700;
-    color: #67d0a3;
+    color: #be202e;
 }
 
 .text {
     font-size: 20px;
+	text-align: justify;
     font-weight: 400;
-    color: #23103d;
+    color: #030303;
 }
 
 .tint {
     height: inherit;
     padding: 5% 0;
-    background-color: rgba(35, 16, 61, 0.5);
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .card-custom-small {
@@ -135,15 +137,15 @@ a:hover {
 
 body {
     padding-top: 80px;
-    background-color: #2b1950;
-    font-family: 'Montserrat';
+    background-color: #101010;
+    font-family: 'Ubuntu';
 }
 
 .page-heading {
     font-weight: 700;
     font-size: 6vw;
     text-align: center;
-    color: #23103d;
+    color: #030303;
 }
 
 .custom-border-radius {
@@ -153,29 +155,29 @@ body {
 .demo-square-short {
     height: 300px;
     width: 100%;
-    background-color: #23103d;
+    background-color: #030303;
 }
 
 .demo-square-tall {
-    height: 500px;
-    widows: 100%;
-    background: #23103d;
+    height: inherit;
+    width: 100%;
+    background: #030303;
 }
 
 .bg-purple {
-    background: #2b1950;
+    background: #101010;
 }
 
 .bg-green {
-    background: #67d0a3;
+    background: #be202e;
 }
 
 .tx-green {
-    color: #67d0a3;
+    color: #be202e;
 }
 
 .tx-purple {
-    color: #23103d;
+    color: #030303;
 }
 
 .word {
@@ -185,7 +187,7 @@ body {
 }
 
 .word-col {
-    border-right: solid 4px #67d0a3;
+    border-right: solid 4px #be202e;
 }
 
 .sentence {
@@ -194,11 +196,14 @@ body {
 
 .reg-div{
 	min-height: 60vh;
-	padding-top: 15vh;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
 }
 
 .footer{
-	height: 200px;
+	min-height: 250px;
+	box-shadow: #be202e 0px 1px 6px 1px;
+	background: #000000;
 }
 
 .footer-text{
@@ -208,4 +213,92 @@ body {
 .footer-info{
 	padding-top: 25px;
 	padding-bottom: 25px;
+}
+
+.contact-img2{
+	background: url(../img/Siddharth.jpg) center top;
+	background-size: cover;
+}
+
+.contact-img1{
+	background: url(../img/Sanjeev.jpg) center top;
+	background-size: cover;
+}
+
+.contact-img3{
+	background: url(../img/Varun.jpg) center top;
+	background-size: cover;
+}
+
+.label{
+	font-variant: small-caps;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.focus1{
+	background: url(../img/focus1.jpg) left top;
+	background-size: cover;
+}
+
+.focus2{
+	background: url(../img/focus2.jpg) left top;
+	background-size: cover;
+}
+
+.focus3{
+	background: url(../img/focus3.jpg) left top;
+	background-size: cover;
+}
+
+.summit-img1 {
+	background: url(../img/summit-img1.png) center center;
+	background-size: cover;
+	width: 100%;
+}
+
+.summit-img2 {
+	background: url(../img/summit-img2.jpg) center center;
+	background-size: cover;
+}
+
+.news{
+	height: 250px;
+}
+
+.maker-img{
+	background: url(../img/makers.jpg) center center;
+	background-size: cover;
+}
+
+.green-energy-img{
+	background: url(../img/green-energy.jpg) center center;
+	background-size: cover;
+}
+
+.accessibility-img{
+	background: url(../img/accessibility.jpg) center center;
+	background-size: cover;
+}
+
+.shaastra-main-img{
+	background: url(../img/shaastra-main.jpg) center center;
+	background-size: cover;
+}
+
+.summit-main-img{
+	background: url(../img/summit-main.jpg) center center;
+	background-size: cover;
+}
+
+.summit-big{
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.sponsor{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
