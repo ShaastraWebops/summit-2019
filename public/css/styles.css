@@ -1,15 +1,15 @@
 .nav-link {
     font-weight: 800;
     font-variant: small-caps;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #be202e;
     padding: 20px;
 }
 
 .big-logo {
 	padding-top: 25px;
-    height: 150px;
-    width: auto;
+    width: 100%;
+	height: auto;
 }
 
 .big-logo-div {
@@ -37,7 +37,7 @@ a:hover {
 }
 
 .fab {
-    font-size: 20px;
+    font-size: 1.25em;
 	padding-right: 5px;
 }
 
@@ -63,7 +63,7 @@ a:hover {
 }
 
 .fas {
-    font-size: 25px;
+    font-size: 1.6em;
     color: #be202e;
 }
 
@@ -96,29 +96,31 @@ a:hover {
 
 .banner{
 	width: 100vw;
-	height: auto;
+	height: 50vw;
+	background: url(../img/home.png) center center;
+	background-size: cover;
 }
 
 .title {
     font-weight: 900;
     color: #be202e;
-    font-size: 60px;
+    font-size: 3.75em;
 }
 
 .subtitle {
-    font-size: 36px;
+    font-size: 2.25em;
     color: #be202e;
     font-weight: 600;
 }
 
 .title2 {
-    font-size: 48px;
+    font-size: 3em;
     font-weight: 700;
     color: #be202e;
 }
 
 .text {
-    font-size: 20px;
+    font-size: 1.25em;
 	text-align: justify;
     font-weight: 400;
     color: #030303;
@@ -143,7 +145,7 @@ body {
 
 .page-heading {
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 4.5em;
     text-align: center;
     color: #030303;
 }
@@ -159,7 +161,7 @@ body {
 }
 
 .demo-square-tall {
-    height: inherit;
+    height: 400px;
     width: 100%;
     background: #030303;
 }
@@ -182,7 +184,7 @@ body {
 
 .word {
     float: right;
-    font-size: 6vh;
+    font-size: 4.5em;
     font-weight: 900;
 }
 
@@ -221,7 +223,7 @@ body {
 }
 
 .contact-img1{
-	background: url(../img/Sanjeev.jpg) center top;
+	background: url(../img/Sanjeev.jpg) right top;
 	background-size: cover;
 }
 
@@ -232,7 +234,7 @@ body {
 
 .label{
 	font-variant: small-caps;
-	font-size: 25px;
+	font-size: 1.6em;
 	font-weight: bold;
 }
 
@@ -252,7 +254,7 @@ body {
 }
 
 .summit-img1 {
-	background: url(../img/summit-img1.png) center center;
+	background: url(../img/summit-img1.jpg) center center;
 	background-size: cover;
 	width: 100%;
 }
@@ -267,7 +269,7 @@ body {
 }
 
 .maker-img{
-	background: url(../img/makers.jpg) center center;
+	background: url(../img/makers.jpg) center bottom;
 	background-size: cover;
 }
 
@@ -293,7 +295,7 @@ body {
 
 .summit-big{
 	padding-bottom: 25px;
-	padding-top: 25px;
+	padding-top: 40px;
 }
 
 .sponsor{

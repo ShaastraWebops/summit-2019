@@ -2,14 +2,20 @@
 
 <nav class="navbar navbar-expand-lg nav-head">
 	<div class="container">
-		<div class="d-lg-none">
+		<div class="d-lg-none float-left">
 			<button class="navbar-toggler" type="button" onClick="toggleSideBar();">
 				<span class="fas fa-bars"></span>
 			</button>
 		</div>
-		<div class="navbar-brand">
-			<img src="../img/summit2.png" class="small-logo" alt="SMALL LOGO">
-			<img src="../img/gsc2.png" class="small-logo sponsor" alt="sponsor">
+		<div class="navbar-brand float-left">
+			<div class="row">
+				<div>
+					<img src="../img/summit2.png" class="small-logo" alt="SMALL LOGO">
+				</div>
+				<div class="d-lg-none d-xl-block">
+					<img src="../img/gsc2.png" class="small-logo sponsor" alt="sponsor">
+				</div>
+			</div>
 		</div>
 
 		<div class="d-none d-lg-block">
@@ -27,7 +33,7 @@
 					<a href="#" class="nav-link">the summit</a>
 				</li>
 				<li class="nav-item lg-nav-item" onClick="goTo('registrations');">
-					<a href="#" class="nav-link">regsitrations</a>
+					<a href="#" class="nav-link">registrations</a>
 				</li>
 				<li class="nav-item lg-nav-item" onClick="goTo('contact');">
 					<a href="#" class="nav-link">contact</a>
