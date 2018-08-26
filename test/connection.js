@@ -1,14 +1,9 @@
-mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
+const mongoose = require('mongoose');
 
-before(function(done){
-	mongoose.connect('mongodb://localhost/summit2019');
+mongoose.connect('mongodb://localhost/summit', { useNewUrlParser: true });
 
 mongoose.connection.once('open',function(){
 	console.log('connection is successfull');
-	done();
-}).once('error',function(error){
+}).on('error',function(error){
 	console.log('error'+error);
 });
-});
-
