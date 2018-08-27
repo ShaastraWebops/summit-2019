@@ -95,11 +95,12 @@ a:hover {
 }
 
 .banner{
-	width: 100vw;
-	height: 50vw;
-	background: url(../img/home.png) center center;
-	background-size: cover;
+	background: url(../img/home.png);
+	background-repeat: no-repeat;
+	background-size: 100vw 50vw;
+	min-height: 50vw;
 }
+
 
 .title {
     font-weight: 900;
