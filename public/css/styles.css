@@ -87,20 +87,19 @@ a:hover {
     border-bottom: 3px solid #be202e;
 }
 
-.main-card {
-    display: table-cell;
-    vertical-align: middle;
-    width: 50%;
-    padding: 10% 0;
-}
-
 .banner{
-	background: url(../img/home.png);
+	background: url(../img/home2.png) center center;
 	background-repeat: no-repeat;
-	background-size: 100vw 50vw;
-	min-height: 50vw;
+	background-size: cover;
+	height: 90vh;
 }
 
+.banner-small{
+	background: url(../img/home2.png);
+	background-size: cover;
+	min-height: 50vw;
+	width: 100vw;
+}
 
 .title {
     font-weight: 900;
@@ -125,12 +124,6 @@ a:hover {
 	text-align: justify;
     font-weight: 400;
     color: #030303;
-}
-
-.tint {
-    height: inherit;
-    padding: 5% 0;
-    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .card-custom-small {
@@ -181,20 +174,6 @@ body {
 
 .tx-purple {
     color: #030303;
-}
-
-.word {
-    float: right;
-    font-size: 4.5em;
-    font-weight: 900;
-}
-
-.word-col {
-    border-right: solid 4px #be202e;
-}
-
-.sentence {
-    padding-top: 0.5vh;
 }
 
 .reg-div{
@@ -266,7 +245,7 @@ body {
 }
 
 .news{
-	height: 250px;
+	height: 225px;
 }
 
 .maker-img{
@@ -304,4 +283,75 @@ body {
 	padding-bottom: 10px;
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.news-text {
+	font-size: 1.25em;
+    font-weight: 400;
+    color: #030303;
+}
+
+.news-6{
+	background: url(../img/news6.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.news-3{
+	background: url(../img/news3.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.news-4{
+	background: url(../img/news4.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.news-5{
+	background: url(../img/news5.jpg) center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.news-1{
+	background: url(../img/news1.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.news-2{
+	background: url(../img/news2.jpg) center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.highlight-row {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.word-col {
+	text-align: right;
+}
+
+.sentence-col {
+	border-left: 3px solid #be202e;
+}
+
+.word {
+	font-size: 3em;
+	color: white;
+}
+
+.sentence {
+	font-size: 1.5em;
+	color: #be202e;
+}
+
+.highlight-tab {
+	background: url(../img/highlights.png) no-repeat no-repeat;
+	height: inherit;
+	background-size: contain
 }
