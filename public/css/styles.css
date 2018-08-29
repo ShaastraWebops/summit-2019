@@ -42,13 +42,14 @@ a:hover {
 }
 
 .small-logo {
-    height: 70px;
+    height: 9vh;
     padding-top: 7px;
     padding-bottom: 7px;
 }
 
 .nav-head {
-    height: 80px;
+    height: auto;
+	width: 100%;
     background: #030303;
     box-shadow: #be202e 0px 1px 6px 1px;
 }
