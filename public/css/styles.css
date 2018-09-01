@@ -88,14 +88,14 @@ a:hover {
 }
 
 .banner{
-	background: url(../img/home2.png) center center;
+	background: url(../img/home2.png) center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 90vh;
 }
 
 .banner-small{
-	background: url(../img/home2.png);
+	background: url(../img/home2.png) center center;
 	background-size: cover;
 	min-height: 50vw;
 	width: 100vw;
@@ -132,7 +132,7 @@ a:hover {
 }
 
 body {
-    padding-top: 80px;
+    margin-top: 80px;
     background-color: #101010;
     font-family: 'Ubuntu';
 }

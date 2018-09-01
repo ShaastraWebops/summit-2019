@@ -1,26 +1,27 @@
 <!-- Navbar for viewport > sm -->
 <nav class="navbar navbar-expand-lg nav-head">
 	<div class="container">
-		<div class="d-lg-none float-left">
-			<button class="navbar-toggler" type="button" onClick="toggleSideBar();">
-				<span class="fas fa-bars"></span>
-			</button>
-		</div>
-		<div class="navbar-brand float-left">
-			<div class="row">
+		<div class="row align-items-center justify-content-between">
+			<div class="d-lg-none">
+				<button class="navbar-toggler" type="button" onClick="toggleSideBar();">
+					<span class="fas fa-bars"></span>
+				</button>
+			</div>
+			<div class="navbar-brand">
 				<div>
 					<a href="#">
 						<img src="../img/summit2.png" class="small-logo" alt="SMALL LOGO" onClick="goTo('home');">
 					</a>
 				</div>
-				<div class="d-none d-xl-block">
+			</div>
+			<div class="navbar-brand">
+				<div class="d-lg-none d-xl-block">
 					<a href="http://www.globalsportscommerce.com" target="_blank">
 						<img src="../img/gsc2.png" class="small-logo sponsor" alt="sponsor">
 					</a>
 				</div>
 			</div>
 		</div>
-
 		<div class="d-none d-lg-block">
 			<ul class="navbar-nav float-right">
 				<li class="nav-item lg-nav-item" onClick="goTo('home');">
@@ -62,7 +63,7 @@
 			<a href="" ui-sref="editions" class="nav-link" onclick="toggleSideBar(); goTo('summit');">the summit</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
-			<a href="#" ui-sref="registrations" class="nav-link" onclick="toggleSideBar(); goTo('registrations');">registrations</a>
+			<a href="#" ui-sref="registrations" class="nav-link" onclick="toggleSideBar(); goTo('registrations');">register</a>
 		</li>
 		<li class="nav-item sm-nav-item" data-toggle="pill" role="tab" aria-selected="false">
 			<a href="#" ui-sref="contact" class="nav-link" onclick="toggleSideBar(); goTo('contact');">contact</a>
