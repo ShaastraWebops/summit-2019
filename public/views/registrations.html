@@ -2,55 +2,190 @@
     <h1 class="page-heading animated fadeInUp">REGISTER</h1>
 </div>
 <br>
-<div class="container">
+<div class="container" ng-controller="mainCtrl as main">
     <div class="reg-div">
         <center>
             <h1 class="subtitle" data-aos="fade-down">
-				Registrations for Summit 2019 shall open soon.
+				Registrations for Summit 2019 are open.
             	<br>
-				To stay updated fill out the following form.
         	</h1>
         </center>
+        <button type="button" ng-if="!viewForm" class="btn btn-block bg-green label" ng-click="toggleForm()" name="button">View Form</button>
         <br>
-		<div class="row">
-			<div class="col-md-1"></div>
+		<div class="row" ng-if="viewForm">
+      <div class="col-md-1"></div>
 	        <div class="col-md-10">
 	            <div class="card form-card custom-border-radius" data-aos="fade-down">
 	                <div class="card-body">
 	                    <form>
 	                        <div class="form-group">
 	                            <label for="Name" class="label">name</label>
-	                            <input class="form-control" type="text" name="Name" placeholder="Enter your Full Name">
+	                            <input class="form-control" type="text" ng-model="user.name" name="Name" placeholder="Enter your Full Name">
 	                        </div>
-	                        <div class="form-group">
+                          <div class="form-group">
 	                            <label for="Email" class="label">email</label>
-	                            <input class="form-control" type="email" name="Email" placeholder="Enter your email">
+	                            <input class="form-control" type="email" ng-model="user.email" name="Email" placeholder="Enter your email">
 	                        </div>
 	                        <div class="form-group">
 	                            <label for="Phone" class="label">phone</label>
-	                            <input class="form-control" type="tel" name="Phone" placeholder="Enter your 10 digit number">
+	                            <input class="form-control" type="tel" ng-model="user.phone" name="Phone" placeholder="Enter your mobile number">
 	                        </div>
+                          <label for="Occupation" class="label">occupation</label>
 							<div class="form-check form-group">
 								<div class="row">
 									<div class="col-lg-2 col-md-3 col-sm-4 float-left">
-										<input type="radio" class="form-check-input" name="apptype" id="student">
+										<input type="radio" class="form-check-input" ng-model="user.occ" value="student" name="apptype" id="student">
 										<label class="form-check-label text">Student </label>
 									</div>
 									<div class="col-lg-2 col-md-3 col-sm-4">
-											<input type="radio" class="form-check-input" name="apptype" id="startup">
+											<input type="radio" class="form-check-input" ng-model="user.occ" value="startup" name="apptype" id="startup">
 											<label class="form-check-label text">Startup </label>
 									</div>
 									<div class="col-lg-3 col-sm-4 col-md-3 float-right">
-										<input type="radio" class="form-check-input" name="apptype" id="professiona;">
+										<input type="radio" class="form-check-input" ng-model="user.occ" value="professional" name="apptype" id="professiona;">
 										<label class="form-check-label text">Professional </label>
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
-								<button type="button" class="btn btn-block bg-green label" name="button">submit</button>
+								<button type="button" class="btn btn-block bg-green label" ng-click="continueForm()" ng-if="!showNext" name="button">continue</button>
 							</div>
+
+              <div ng-if="user.occ === 'student' && showNext">
+                <div class="form-group">
+                    <label for="Year" class="label">academic year</label>
+                    <input class="form-control" type="text" ng-model="user.year" name="Year" placeholder="Enter your current academic year">
+                </div>
+                <div class="form-group">
+                    <label for="Branch" class="label">branch/stream</label>
+                    <input class="form-control" type="text" ng-model="user.stream" name="Branch" placeholder="Enter your branch or stream">
+                </div>
+                <div class="form-group">
+                    <label for="Institution" class="label">institution</label>
+                    <input class="form-control" type="text" ng-model="user.institute" name="Institution" placeholder="Enter your institution name">
+                </div>
+
+                <div class="form-group">
+                    <label for="q1" class="label">What does Sports Technology mean to you?</label>
+                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                </div>
+                <div class="form-group">
+                    <label for="q2" class="label" style="font-size: 1.5em;">Do you have any experience working in fields that can directly or indirectly be related to sports technology? If yes, please elaborate. </label>
+                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                </div>
+                <div class="form-group">
+                    <label for="q3" class="label" style="font-size: 1.27em;">The SportsTech Summit 2019 includes mainly three tracks: ‘Tech in Action’, ‘Analytics: The Numbers Game’ and ‘Brands, Leagues & Fans’. Which is your favourite track among the three? How has it changed the sporting world in the past and what improvements can be made with it’s help?</label>
+                    <input class="form-control" type="text" ng-model="user.q3" name="q3">
+                </div>
+                <div class="form-group">
+                    <label for="q4" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
+                    <input class="form-control" type="text" ng-model="user.q4" name="q4">
+                </div>
+              </div>
+
+              <div ng-if="user.occ === 'startup' && showNext">
+                <div class="form-group">
+                    <label for="startup_name" class="label">startup name</label>
+                    <input class="form-control" type="text" ng-model="user.startup_name" name="startup_name" placeholder="Enter the name of your startup">
+                </div>
+                <div class="form-group">
+                    <label for="est_year" class="label">establishment year</label>
+                    <input class="form-control" type="text" ng-model="user.est_year" name="est_year" placeholder="Enter the establishment year of your startup">
+                </div>
+                <div class="form-group">
+                    <label for="links" class="label">relevant links (optional):</label>
+                    <input class="form-control" type="text" ng-model="user.links" name="links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                </div>
+
+                <div class="form-group">
+                    <label for="q1" class="label">What does your startup aim to achieve? How is it related to Sports Technology?</label>
+                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                </div>
+                <div class="form-group">
+                    <label for="q2" class="label">What do you look to gain from the SportsTech Summit 2019? </label>
+                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                </div>
+              </div>
+
+              <div ng-if="user.occ === 'professional' && showNext">
+                <div class="form-group">
+                    <label for="startup_name" class="label">category</label>
+                </div>
+                <div class="form-check form-group">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4 float-left">
+                      <input type="radio" class="form-check-input" ng-model="user.pro_category" value="sports_pro" name="apptype">
+                      <label class="form-check-label text">Sports Technology Professional </label>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <input type="radio" class="form-check-input" ng-model="user.pro_category" value="other_pro" name="apptype">
+                        <label class="form-check-label text">Other Professional</label>
+                    </div>
+                  </div>
+                </div>
+                <div ng-if="user.pro_category === 'sports_pro'">
+                  <div class="form-group">
+                      <label for="position" class="label">position</label>
+                      <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position">
+                  </div>
+                  <div class="form-group">
+                      <label for="company" class="label">company</label>
+                      <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company">
+                  </div>
+                  <div class="form-group">
+                      <label for="field" class="label">field of work</label>
+                      <input class="form-control" type="text" ng-model="user.field" name="field" placeholder="Enter your field of work">
+                  </div>
+                  <div class="form-group">
+                      <label for="years" class="label">years of experience</label>
+                      <input class="form-control" type="text" ng-model="user.years" name="years" placeholder="Enter your experience (in years)">
+                  </div>
+                  <div class="form-group">
+                      <label for="links" class="label">relevant links (optional):</label>
+                      <input class="form-control" type="text" ng-model="user.links" name="links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                  </div>
+              </div>
+
+              <div ng-if="user.pro_category === 'other_pro'">
+                <div class="form-group">
+                    <label for="position" class="label">position</label>
+                    <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position">
+                </div>
+                <div class="form-group">
+                    <label for="company" class="label">company</label>
+                    <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company">
+                </div>
+                <div class="form-group">
+                    <label for="industry" class="label">industry</label>
+                    <input class="form-control" type="text" ng-model="user.industry" name="industry" placeholder="Enter the industry you are working in">
+                </div>
+                <div class="form-group">
+                    <label for="years" class="label">years of experience</label>
+                    <input class="form-control" type="text" ng-model="user.years" name="years" placeholder="Enter your experience (in years)">
+                </div>
+
+                <div class="form-group">
+                    <label for="q1" class="label">Do you have any experience working in fields related to Sports Technology? If yes, please elaborate.</label>
+                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                </div>
+                <div class="form-group">
+                    <label for="q2" class="label">Can your field of work contribute to advancement in Sports Technology? If yes, please elaborate. </label>
+                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                </div>
+                <div class="form-group">
+                    <label for="q3" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
+                    <input class="form-control" type="text" ng-model="user.q3" name="q3">
+                </div>
+            </div>
+</div>
+              <div class="form-group">
+                <button type="button" class="btn btn-block bg-green label" ng-click="toggleForm()" name="button">Hide Form</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-block bg-green label" ng-if="showNext" ng-click="submitForm()" name="button">Submit</button>
+              </div>
 	                    </form>
-	                </div>
+
 	            </div>
 	        </div>
 		</div>

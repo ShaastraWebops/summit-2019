@@ -1,5 +1,5 @@
 (function () {
-	angular.module('summit-2019', [])
+	angular.module('summit-2019', ['mainController'])
 		.directive('navBar', NavBarDirective)
 		.directive('home', HomeDirective)
 		.directive('about', AboutDirective)
