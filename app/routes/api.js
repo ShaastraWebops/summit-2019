@@ -5,6 +5,8 @@ var Gridfs=require('gridfs-stream');
 var db = null;
 var mongoDriver = null;
 var gfs = null;
+var express = require("express");
+var app = express();
 mongoose.connect('mongodb://localhost:27017/summit-portal',function(err){
   if(err)
   console.log("Not Connected!!");
@@ -15,6 +17,9 @@ mongoose.connect('mongodb://localhost:27017/summit-portal',function(err){
     gfs = new Gridfs(db, mongoDriver);
   }
 });
+
+
+
 //router= export all accessing done to server
 module.exports = function(router){
 router.post('/post',function(req,res){
@@ -45,3 +50,4 @@ router.post('/post',function(req,res){
   });
   return router;
 };
+

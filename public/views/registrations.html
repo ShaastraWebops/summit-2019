@@ -17,34 +17,57 @@
 	        <div class="col-md-10">
 	            <div class="card form-card custom-border-radius" data-aos="fade-down">
 	                <div class="card-body">
-	                    <form>
+	                    <form name="form" ng-submit = "submitForm(form)" novalidate>
+
 	                        <div class="form-group">
 	                            <label for="Name" class="label">name</label>
-	                            <input class="form-control" type="text" ng-model="user.name" name="Name" placeholder="Enter your Full Name">
+	                            <input class="form-control" type="text" ng-model="user.name" name="Name" placeholder="Enter your Full Name" required>
+                              <p class="help-block" ng-show="form.Name.$error.required && submitted">
+                              A name is required
+                              </p>
 	                        </div>
+
                           <div class="form-group">
 	                            <label for="Email" class="label">email</label>
-	                            <input class="form-control" type="email" ng-model="user.email" name="Email" placeholder="Enter your email">
+	                            <input class="form-control" type="email" ng-model="user.email" name="Email" placeholder="Enter your email" required>
+                              <p class="help-block" ng-show="(!form.Email.$error.email && form.Email.$error.required) && submitted">
+                              An Email is required.
+                              </p>
+                              <p class="help-block" ng-show="(form.Email.$error.email && !form.Email.$error.required) && submitted">
+                              Doesn't look like a valid Email.
+                              </p>
 	                        </div>
+
 	                        <div class="form-group">
 	                            <label for="Phone" class="label">phone</label>
-	                            <input class="form-control" type="tel" ng-model="user.phone" name="Phone" placeholder="Enter your mobile number">
+	                            <input class="form-control" type="number"
+                              ng-minlength="10" ng-maxlength="10" ng-model="user.phone" name="Phone" placeholder="Enter your mobile number" required>
+                              <p class="help-block" ng-show="(form.Phone.$error.minlength || form.Phone.$error.maxlength) && submitted && !form.Phone.$error.required">
+                              Phone Number should have 10 digits.
+                              </p>
+                              <p class="help-block" ng-show="form.Phone.$error.required && submitted">
+                              Phone Number is required.
+                              </p>
 	                        </div>
+
                           <label for="Occupation" class="label">occupation</label>
 							<div class="form-check form-group">
 								<div class="row">
 									<div class="col-lg-2 col-md-3 col-sm-4 float-left">
-										<input type="radio" class="form-check-input" ng-model="user.occ" value="student" name="apptype" id="student">
+										<input type="radio" class="form-check-input" ng-model="user.occ" value="student" name="apptype" id="student" required>
 										<label class="form-check-label text">Student </label>
 									</div>
 									<div class="col-lg-2 col-md-3 col-sm-4">
-											<input type="radio" class="form-check-input" ng-model="user.occ" value="startup" name="apptype" id="startup">
+											<input type="radio" class="form-check-input" ng-model="user.occ" value="startup" name="apptype" id="startup" required>
 											<label class="form-check-label text">Startup </label>
 									</div>
 									<div class="col-lg-3 col-sm-4 col-md-3 float-right">
-										<input type="radio" class="form-check-input" ng-model="user.occ" value="professional" name="apptype" id="professiona;">
+										<input type="radio" class="form-check-input" ng-model="user.occ" value="professional" name="apptype" id="professional;" required>
 										<label class="form-check-label text">Professional </label>
 									</div>
+                  <p class="help-block" ng-show="(form.apptype.$error.required) && submitted">
+                  Select the one which is applicable to you.
+                  </p>
 								</div>
 							</div>
 							<div class="form-group">
@@ -54,56 +77,89 @@
               <div ng-if="user.occ === 'student' && showNext">
                 <div class="form-group">
                     <label for="Year" class="label">academic year</label>
-                    <input class="form-control" type="text" ng-model="user.year" name="Year" placeholder="Enter your current academic year">
+                    <input class="form-control" type="text" ng-model="user.year" name="Year" placeholder="Enter your current academic year"  required>
+                    <p class="help-block" ng-show="(form.Year.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="Branch" class="label">branch/stream</label>
-                    <input class="form-control" type="text" ng-model="user.stream" name="Branch" placeholder="Enter your branch or stream">
+                    <input class="form-control" type="text" ng-model="user.stream" name="Branch" placeholder="Enter your branch or stream"  required>
+                    <p class="help-block" ng-show="(form.Branch.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="Institution" class="label">institution</label>
-                    <input class="form-control" type="text" ng-model="user.institute" name="Institution" placeholder="Enter your institution name">
+                    <input class="form-control" type="text" ng-model="user.institute" name="Institution" placeholder="Enter your institution name" required>
+                    <p class="help-block" ng-show="(form.Institution.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
 
                 <div class="form-group">
-                    <label for="q1" class="label">What does Sports Technology mean to you?</label>
-                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                    <label for="stud_q1" class="label">What does Sports Technology mean to you?</label>
+                    <input class="form-control" type="text" ng-model="user.stud_q1" name="stud_q1" required>
+                    <p class="help-block" ng-show="(form.stud_q1.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
-                    <label for="q2" class="label" style="font-size: 1.5em;">Do you have any experience working in fields that can directly or indirectly be related to sports technology? If yes, please elaborate. </label>
-                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                    <label for="stud_q2" class="label" style="font-size: 1.5em;">Do you have any experience working in fields that can directly or indirectly be related to sports technology? If yes, please elaborate. </label>
+                    <input class="form-control" type="text" ng-model="user.stud_q2" name="stud_q2" required>
+                    <p class="help-block" ng-show="(form.stud_q2.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
-                    <label for="q3" class="label" style="font-size: 1.27em;">The SportsTech Summit 2019 includes mainly three tracks: ‘Tech in Action’, ‘Analytics: The Numbers Game’ and ‘Brands, Leagues & Fans’. Which is your favourite track among the three? How has it changed the sporting world in the past and what improvements can be made with it’s help?</label>
-                    <input class="form-control" type="text" ng-model="user.q3" name="q3">
+                    <label for="stud_q3" class="label" style="font-size: 1.27em;">The SportsTech Summit 2019 includes mainly three tracks: ‘Tech in Action’, ‘Analytics: The Numbers Game’ and ‘Brands, Leagues & Fans’. Which is your favourite track among the three? How has it changed the sporting world in the past and what improvements can be made with it’s help?</label>
+                    <input class="form-control" type="text" ng-model="user.stud_q3" name="stud_q3" required>
+                    <p class="help-block" ng-show="(form.stud_q3.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
-                    <label for="q4" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
-                    <input class="form-control" type="text" ng-model="user.q4" name="q4">
+                    <label for="stud_q4" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
+                    <input class="form-control" type="text" ng-model="user.stud_q4" name="stud_q4" required>
+                    <p class="help-block" ng-show="(form.stud_q4.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
               </div>
 
               <div ng-if="user.occ === 'startup' && showNext">
                 <div class="form-group">
                     <label for="startup_name" class="label">startup name</label>
-                    <input class="form-control" type="text" ng-model="user.startup_name" name="startup_name" placeholder="Enter the name of your startup">
+                    <input class="form-control" type="text" ng-model="user.startup_name" name="startup_name" placeholder="Enter the name of your startup" required>
+                    <p class="help-block" ng-show="(form.startup_name.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="est_year" class="label">establishment year</label>
-                    <input class="form-control" type="text" ng-model="user.est_year" name="est_year" placeholder="Enter the establishment year of your startup">
+                    <input class="form-control" type="number" ng-model="user.est_year" name="est_year" placeholder="Enter the establishment year of your startup" required>
+                    <p class="help-block" ng-show="(form.est_year.$error.required) && submitted">
+                    This field is required.
+                    </p>                    
                 </div>
                 <div class="form-group">
                     <label for="links" class="label">relevant links (optional):</label>
-                    <input class="form-control" type="text" ng-model="user.links" name="links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                    <input class="form-control" type="text" ng-model="user.startup_links" name="startup_links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
                 </div>
 
                 <div class="form-group">
-                    <label for="q1" class="label">What does your startup aim to achieve? How is it related to Sports Technology?</label>
-                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                    <label for="startup_q1" class="label">What does your startup aim to achieve? How is it related to Sports Technology?</label>
+                    <input class="form-control" type="text" ng-model="user.startup_q1" name="startup_q1" required>
+                    <p class="help-block" ng-show="(form.startup_q1.$error.required) && submitted">
+                    This field is required.
+                    </p>                    
                 </div>
                 <div class="form-group">
-                    <label for="q2" class="label">What do you look to gain from the SportsTech Summit 2019? </label>
-                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                    <label for="startup_q2" class="label">What do you look to gain from the SportsTech Summit 2019? </label>
+                    <input class="form-control" type="text" ng-model="user.startup_q2" name="startup_q2" required>
+                    <p class="help-block" ng-show="(form.startup_q2.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
               </div>
 
@@ -114,67 +170,104 @@
                 <div class="form-check form-group">
                   <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4 float-left">
-                      <input type="radio" class="form-check-input" ng-model="user.pro_category" value="sports_pro" name="apptype">
+                      <input type="radio" class="form-check-input" ng-model="user.pro_category" value="sports_pro" name="apptype1" required>
                       <label class="form-check-label text">Sports Technology Professional </label>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-4">
-                        <input type="radio" class="form-check-input" ng-model="user.pro_category" value="other_pro" name="apptype">
+                        <input type="radio" class="form-check-input" ng-model="user.pro_category" value="other_pro" name="apptype1" required>
                         <label class="form-check-label text">Other Professional</label>
+
                     </div>
+                    <p class="help-block" ng-show="(form.apptype1.$error.required) && submitted">
+                        This field is required.
+                    </p>
                   </div>
                 </div>
                 <div ng-if="user.pro_category === 'sports_pro'">
                   <div class="form-group">
                       <label for="position" class="label">position</label>
-                      <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position">
+                      <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position" required>
+                      <p class="help-block" ng-show="(form.position.$error.required) && submitted">
+                      This field is required.
+                      </p>
                   </div>
                   <div class="form-group">
                       <label for="company" class="label">company</label>
-                      <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company">
+                      <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company" required>
+                      <p class="help-block" ng-show="(form.company.$error.required) && submitted">
+                      This field is required.
+                      </p>
                   </div>
                   <div class="form-group">
                       <label for="field" class="label">field of work</label>
-                      <input class="form-control" type="text" ng-model="user.field" name="field" placeholder="Enter your field of work">
+                      <input class="form-control" type="text" ng-model="user.field" name="field" placeholder="Enter your field of work" required>
+                      <p class="help-block" ng-show="(form.field.$error.required) && submitted">
+                      This field is required.
+                      </p>
                   </div>
                   <div class="form-group">
                       <label for="years" class="label">years of experience</label>
-                      <input class="form-control" type="text" ng-model="user.years" name="years" placeholder="Enter your experience (in years)">
+                      <input class="form-control" type="number" ng-model="user.years" name="years" placeholder="Enter your experience (in years)" required>
+                      <p class="help-block" ng-show="(form.years.$error.required) && submitted">
+                      This field is required.
+                      </p>
                   </div>
                   <div class="form-group">
                       <label for="links" class="label">relevant links (optional):</label>
-                      <input class="form-control" type="text" ng-model="user.links" name="links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                      <input class="form-control" type="text" ng-model="user.links" name="relLinks" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
                   </div>
               </div>
 
               <div ng-if="user.pro_category === 'other_pro'">
                 <div class="form-group">
                     <label for="position" class="label">position</label>
-                    <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position">
+                    <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position" required>
+                      <p class="help-block" ng-show="(form.position.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="company" class="label">company</label>
-                    <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company">
+                    <input class="form-control" type="text" ng-model="user.company" name="company" placeholder="Enter your company" required>
+                    <p class="help-block" ng-show="(form.company.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="industry" class="label">industry</label>
-                    <input class="form-control" type="text" ng-model="user.industry" name="industry" placeholder="Enter the industry you are working in">
+                    <input class="form-control" type="text" ng-model="user.industry" name="industry" placeholder="Enter the industry you are working in" required>
+                    <p class="help-block" ng-show="(form.industry.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="years" class="label">years of experience</label>
-                    <input class="form-control" type="text" ng-model="user.years" name="years" placeholder="Enter your experience (in years)">
+                    <input class="form-control" type="number" ng-model="user.years" name="years" placeholder="Enter your experience (in years)" required>
+                    <p class="help-block" ng-show="(form.years.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
 
                 <div class="form-group">
-                    <label for="q1" class="label">Do you have any experience working in fields related to Sports Technology? If yes, please elaborate.</label>
-                    <input class="form-control" type="text" ng-model="user.q1" name="q1">
+                    <label for="pro_q1" class="label">Do you have any experience working in fields related to Sports Technology? If yes, please elaborate.</label>
+                    <input class="form-control" type="text" ng-model="user.pro_q1" name="pro_q1" required>
+                      <p class="help-block" ng-show="(form.pro_q1.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
-                    <label for="q2" class="label">Can your field of work contribute to advancement in Sports Technology? If yes, please elaborate. </label>
-                    <input class="form-control" type="text" ng-model="user.q2" name="q2">
+                    <label for="pro_q2" class="label">Can your field of work contribute to advancement in Sports Technology? If yes, please elaborate. </label>
+                    <input class="form-control" type="text" ng-model="user.pro_q2" name="pro_q2" required>
+                    <p class="help-block" ng-show="(form.pro_q2.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
                 <div class="form-group">
-                    <label for="q3" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
-                    <input class="form-control" type="text" ng-model="user.q3" name="q3">
+                    <label for="pro_q3" class="label">Why do you want to attend the SportsTech Summit 2019?</label>
+                    <input class="form-control" type="text" ng-model="user.pro_q3" name="pro_q3" required>
+                    <p class="help-block" ng-show="(form.pro_q3.$error.required) && submitted">
+                    This field is required.
+                    </p>
                 </div>
             </div>
 </div>
@@ -182,7 +275,9 @@
                 <button type="button" class="btn btn-block bg-green label" ng-click="toggleForm()" name="button">Hide Form</button>
               </div>
               <div class="form-group">
-                <button type="button" class="btn btn-block bg-green label" ng-if="showNext" ng-click="submitForm()" name="button">Submit</button>
+                <button type="submit" class="btn btn-block bg-green label" ng-if="showNext" name="button">Submit</button>
+                <p ng-show="!submitError && submitted" class="success">Your information has been successfully recorded!!!</p>
+                <p ng-show="submitError && submitted" ng-bind="submissionStatus" class="help-block">{{submissionStatus}}</p>
               </div>
 	                    </form>
 
