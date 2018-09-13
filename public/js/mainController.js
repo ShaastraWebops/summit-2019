@@ -42,11 +42,15 @@ angular.module('mainController',[])
             }).then(function successCallback(response) {
               // this callback will be called asynchronously
               // when the response is available
-              console.log(response);
+              $scope.submitError = false;
             }, function errorCallback(response) {
               // called asynchronously if an error occurs
               // or server returns response with an error status.
-              console.log(response);
+              $scope.submitError = true;
+              if( response.data.code == 11000 )
+                $scope.submissionStatus = "Email Address or Phone Number Already in Use";
+              else
+                $scope.submissionStatus = "Something went wrong. Kindly contact the administrator.";
             });
             }
         
@@ -72,11 +76,15 @@ angular.module('mainController',[])
             }).then(function successCallback(response) {
               // this callback will be called asynchronously
               // when the response is available
-              console.log(response);
+              $scope.submitError = false;
             }, function errorCallback(response) {
               // called asynchronously if an error occurs
               // or server returns response with an error status.
-              console.log(response);
+              $scope.submitError = true;
+              if( response.data.code == 11000 )
+                $scope.submissionStatus = "Email Address or Phone Number Already in Use";
+              else
+                $scope.submissionStatus = "Something went wrong. Kindly contact the administrator.";
             });
             }
 
@@ -103,11 +111,15 @@ angular.module('mainController',[])
             }).then(function successCallback(response) {
               // this callback will be called asynchronously
               // when the response is available
-              console.log(response);
+              $scope.submitError = false;
             }, function errorCallback(response) {
               // called asynchronously if an error occurs
               // or server returns response with an error status.
-              console.log(response);
+              $scope.submitError = true;
+              if( response.data.code == 11000 )
+                $scope.submissionStatus = "Email Address or Phone Number Already in Use";
+              else
+                $scope.submissionStatus = "Something went wrong. Kindly contact the administrator.";
             });
             }
         
