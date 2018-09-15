@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var titlize = require('mongoose-title-case');
 var validate = require('mongoose-validator');
 
-var nameValidator = [
+/*var nameValidator = [
   validate({
     validator: 'matches',
     arguments: /^(([a-zA-Z]{1,20})+[ ]+([a-zA-Z]{1,20})+)+$/,
@@ -33,7 +33,7 @@ var userValidator = [
     validator: 'isAlphanumeric',
     message: 'Username must contain letters and numbers only'
   })
-];
+];*/
 
 var passwordValidator = [
   validate({
@@ -48,10 +48,19 @@ var passwordValidator = [
   })
 ];
 
-var userSchema = new Schema({
-  name: {type: String, required: true, validate: nameValidator},
-  username: {type: String, required: true, unique: true, validate: userValidator},
-  email: {type: String, required: true, unique: true, validate: emailValidator},
+var studentSchema = new Schema({
+  name: {type: String, required: true/*, validate: nameValidator*/},
+  //username: {type: String, required: true, unique: true, validate: userValidator},
+  email: {type: String, required: true, unique: true/*, validate: emailValidator*/},
+  phone: {type: Number ,unique: true,required:true},
+  apptype: {type: String,required: true},
+  academicYear: {type:Number,required: true},
+  branch: {type:String,required:true},
+  institute: {type:String,required:true},
+  question1: {type:String,required:true},
+  question2: {type:String,required:true},
+  question3: {type:String,required:true},
+  question4: {type:String,required:true},
   role: Boolean,
   pending:[
       {type: Schema.Types.ObjectId, ref: 'Post'}
@@ -62,7 +71,88 @@ var userSchema = new Schema({
   rejected:[
           {type: Schema.Types.ObjectId, ref: 'Post'}
       ],
-  permission: {type: String, required: true}
+  /*permission: {type: String, required: true}*/
 });
 
- module.exports = mongoose.model('User',userSchema);
+var startupSchema = new Schema({
+  name: {type: String, required: true/*, validate: nameValidator*/},
+  //username: {type: String, required: true, unique: true, validate: userValidator},
+  email: {type: String, required: true, unique: true/*, validate: emailValidator*/},
+  phone: {type: Number ,unique: true,required:true},
+  apptype: {type: String,required: true},
+  startupName: {type:String,required: true},
+  estYear: {type:Number,required:true},
+  relLinks: {type:String},
+  question1: {type:String,required:true},
+  question2: {type:String,required:true},
+  role: Boolean,
+  pending:[
+      {type: Schema.Types.ObjectId, ref: 'Post'}
+    ],
+  approved:[
+        {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  rejected:[
+          {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  /*permission: {type: String, required: true}*/
+});
+
+var sportsProfessionalSchema = new Schema({
+  name: {type: String, required: true/*, validate: nameValidator*/},
+  //username: {type: String, required: true, unique: true, validate: userValidator},
+  email: {type: String, required: true, unique: true/*, validate: emailValidator*/},
+  phone: {type: Number ,unique: true,required:true},
+  apptype: {type: String,required: true},
+  apptype1: {type:String,required:true},
+  position: {type:String,required:true},
+  company: {type:String,required:true},
+  field: {type:String,required:true},
+  expYear:{type:Number,required:true},
+  relLinks: {type:String},
+  role: Boolean,
+  pending:[
+      {type: Schema.Types.ObjectId, ref: 'Post'}
+    ],
+  approved:[
+        {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  rejected:[
+          {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  /*permission: {type: String, required: true}*/
+});
+
+var otherProfessionalSchema = new Schema({
+  name: {type: String, required: true/*, validate: nameValidator*/},
+  //username: {type: String, required: true, unique: true, validate: userValidator},
+  email: {type: String, required: true, unique: true/*, validate: emailValidator*/},
+  phone: {type: Number ,unique: true,required:true},
+  apptype: {type: String,required: true},
+  apptype1: {type:String,required:true},
+  position: {type:String,required:true},
+  company: {type:String,required:true},
+  industry: {type:String,required:true},
+  expYear:{type:Number,required:true},
+  question1:{type:String,required:true},
+  question2:{type:String,required:true},
+  question3:{type:String,required:true},
+  role: Boolean,
+  pending:[
+      {type: Schema.Types.ObjectId, ref: 'Post'}
+    ],
+  approved:[
+        {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  rejected:[
+          {type: Schema.Types.ObjectId, ref: 'Post'}
+      ],
+  /*permission: {type: String, required: true}*/
+});
+
+
+ module.exports = { student : mongoose.model('student',studentSchema),
+                    startup: mongoose.model('startup',startupSchema),
+                    sportsProfessional : mongoose.model('sportsProfessional',sportsProfessionalSchema),
+                    otherProfessional : mongoose.model('otherProfessional',otherProfessionalSchema)
+                     }
