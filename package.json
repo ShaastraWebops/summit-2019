@@ -7,10 +7,12 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "gridfs-stream": "^1.1.1",
+    "json2csv": "^4.2.1",
     "mongoose": "^5.2.14",
     "mongoose-title-case": "0.0.4",
     "mongoose-validator": "^2.1.0",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {},
   "scripts": {
