@@ -3,7 +3,15 @@
 </div>
 <br>
 <div class="container" ng-controller="mainCtrl as main">
-    <div class="reg-div">
+  <div ng-if="!registrationsOpen">
+    <center>
+        <h1 class="subtitle" data-aos="fade-down">
+            Registrations for Summit 2019 will open soon!.
+          <br>
+      </h1>
+    </center>
+  </div>
+    <div class="reg-div" ng-if="registrationsOpen">
         <center>
             <h1 class="subtitle" data-aos="fade-down">
 				Registrations for Summit 2019 are open.
@@ -140,7 +148,7 @@
                     <input class="form-control" type="number" ng-model="user.est_year" name="est_year" placeholder="Enter the establishment year of your startup" required>
                     <p class="help-block" ng-show="(form.est_year.$error.required) && submitted">
                     This field is required.
-                    </p>                    
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="links" class="label">relevant links (optional):</label>
@@ -152,7 +160,7 @@
                     <input class="form-control" type="text" ng-model="user.startup_q1" name="startup_q1" required>
                     <p class="help-block" ng-show="(form.startup_q1.$error.required) && submitted">
                     This field is required.
-                    </p>                    
+                    </p>
                 </div>
                 <div class="form-group">
                     <label for="startup_q2" class="label">What do you look to gain from the SportsTech Summit 2019? </label>
@@ -285,4 +293,5 @@
 	        </div>
 		</div>
     </div>
+</div>
 </div>

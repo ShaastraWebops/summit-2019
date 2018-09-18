@@ -2,6 +2,7 @@
 
 angular.module('mainController',[])
 .controller('mainCtrl',function($http, $scope){
+  $scope.registrationsOpen = false;
   $scope.viewForm = false;
   $scope.showNext = false;
   $scope.user = {};
@@ -19,14 +20,14 @@ angular.module('mainController',[])
     if( form.$valid ){
 
         if( form.apptype.$viewValue == "student"){
-            
+
           $http({
             method: 'POST',
             url: './add',
             headers: {
               'Content-Type': 'application/json'
             },
-            data: { 
+            data: {
               name: form.Name.$viewValue,
               email: form.Email.$viewValue,
               phone: form.Phone.$viewValue,
@@ -53,16 +54,16 @@ angular.module('mainController',[])
                 $scope.submissionStatus = "Something went wrong. Kindly contact the administrator.";
             });
             }
-        
+
         else if( form.apptype.$viewValue == "startup"){
-            
+
           $http({
             method: 'POST',
             url: './add',
             headers: {
               'Content-Type': 'application/json'
             },
-            data: { 
+            data: {
               name: form.Name.$viewValue,
               email: form.Email.$viewValue,
               phone: form.Phone.$viewValue,
@@ -89,14 +90,14 @@ angular.module('mainController',[])
             }
 
         else if( form.apptype.$viewValue == "professional" && form.apptype1.$viewValue == "sports_pro"){
-            
+
           $http({
             method: 'POST',
             url: './add',
             headers: {
               'Content-Type': 'application/json'
             },
-            data: { 
+            data: {
               name: form.Name.$viewValue,
               email: form.Email.$viewValue,
               phone: form.Phone.$viewValue,
@@ -122,16 +123,16 @@ angular.module('mainController',[])
                 $scope.submissionStatus = "Something went wrong. Kindly contact the administrator.";
             });
             }
-        
+
         else if( form.apptype.$viewValue == "professional" && form.apptype1.$viewValue == "other_pro"){
-            
+
           $http({
             method: 'POST',
             url: './add',
             headers: {
               'Content-Type': 'application/json'
             },
-            data: { 
+            data: {
               name: form.Name.$viewValue,
               email: form.Email.$viewValue,
               phone: form.Phone.$viewValue,
