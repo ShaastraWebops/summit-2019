@@ -6,13 +6,14 @@
   <div ng-if="!registrationsOpen">
     <center>
         <h1 class="subtitle" data-aos="fade-down">
-            Registrations for Summit 2019 will open soon!.
+            Registrations for Summit 2019 will open soon! <br>
+            Enter your details to show your interest in the event!
           <br>
       </h1>
     </center>
   </div>
-    <div class="reg-div" ng-if="registrationsOpen">
-        <center>
+    <div class="reg-div">
+        <center ng-if="registrationsOpen">
             <h1 class="subtitle" data-aos="fade-down">
 				Registrations for Summit 2019 are open.
             	<br>
@@ -79,8 +80,9 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<button type="button" class="btn btn-block bg-green label" ng-click="continueForm()" ng-if="!showNext" name="button">continue</button>
-							</div>
+								<button type="button" class="btn btn-block bg-green label" ng-click="continueForm()" ng-if="!showNext && registrationsOpen" name="button">continue</button>
+                <button type="button" class="btn btn-block bg-green label" ng-click="submitInterested()" ng-if="!registrationsOpen" name="button">submit</button>
+              </div>
 
               <div ng-if="user.occ === 'student' && showNext">
                 <div class="form-group">
@@ -280,7 +282,7 @@
             </div>
 </div>
               <div class="form-group">
-                <button type="button" class="btn btn-block bg-green label" ng-click="toggleForm()" name="button">Hide Form</button>
+                <button type="button" class="btn btn-block bg-green label" ng-if="registrationsOpen" ng-click="toggleForm()" name="button">Hide Form</button>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-block bg-green label" ng-if="showNext" name="button">Submit</button>

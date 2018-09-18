@@ -48,6 +48,14 @@ var passwordValidator = [
   })
 ];
 
+var interestedSchema = new Schema({
+  name: {type: String, required: true/*, validate: nameValidator*/},
+  //username: {type: String, required: true, unique: true, validate: userValidator},
+  email: {type: String, required: true, unique: true/*, validate: emailValidator*/},
+  phone: {type: Number ,unique: true,required:true},
+  apptype: {type: String,required: true}
+});
+
 var studentSchema = new Schema({
   name: {type: String, required: true/*, validate: nameValidator*/},
   //username: {type: String, required: true, unique: true, validate: userValidator},
@@ -61,16 +69,7 @@ var studentSchema = new Schema({
   question2: {type:String,required:true},
   question3: {type:String,required:true},
   question4: {type:String,required:true},
-  role: Boolean,
-  pending:[
-      {type: Schema.Types.ObjectId, ref: 'Post'}
-    ],
-  approved:[
-        {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
-  rejected:[
-          {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
+  role: Boolean
   /*permission: {type: String, required: true}*/
 });
 
@@ -85,16 +84,7 @@ var startupSchema = new Schema({
   relLinks: {type:String},
   question1: {type:String,required:true},
   question2: {type:String,required:true},
-  role: Boolean,
-  pending:[
-      {type: Schema.Types.ObjectId, ref: 'Post'}
-    ],
-  approved:[
-        {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
-  rejected:[
-          {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
+  role: Boolean
   /*permission: {type: String, required: true}*/
 });
 
@@ -110,16 +100,7 @@ var sportsProfessionalSchema = new Schema({
   field: {type:String,required:true},
   expYear:{type:Number,required:true},
   relLinks: {type:String},
-  role: Boolean,
-  pending:[
-      {type: Schema.Types.ObjectId, ref: 'Post'}
-    ],
-  approved:[
-        {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
-  rejected:[
-          {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
+  role: Boolean
   /*permission: {type: String, required: true}*/
 });
 
@@ -137,21 +118,13 @@ var otherProfessionalSchema = new Schema({
   question1:{type:String,required:true},
   question2:{type:String,required:true},
   question3:{type:String,required:true},
-  role: Boolean,
-  pending:[
-      {type: Schema.Types.ObjectId, ref: 'Post'}
-    ],
-  approved:[
-        {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
-  rejected:[
-          {type: Schema.Types.ObjectId, ref: 'Post'}
-      ],
+  role: Boolean
   /*permission: {type: String, required: true}*/
 });
 
 
  module.exports = { student : mongoose.model('student',studentSchema),
+                    interested : mongoose.model('interested',interestedSchema),
                     startup: mongoose.model('startup',startupSchema),
                     sportsProfessional : mongoose.model('sportsProfessional',sportsProfessionalSchema),
                     otherProfessional : mongoose.model('otherProfessional',otherProfessionalSchema)
