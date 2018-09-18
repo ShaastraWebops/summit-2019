@@ -7,16 +7,29 @@ var mongoDriver = null;
 var gfs = null;
 var express = require("express");
 var app = express();
-mongoose.connect('mongodb://localhost:27017/summit-portal',function(err){
-  if(err)
-  console.log("Not Connected!!");
-  else {
-    console.log("Connected to mongodb!");
-    db = mongoose.connection.db;
-    mongoDriver = mongoose.mongo;
-    gfs = new Gridfs(db, mongoDriver);
-  }
-});
+if (process.env.NODE_ENV==='production') {
+  mongoose.connect('mongodb://' + process.env.SUMMIT_USER + ':' + process.env.SUMMIT_PASSWORD + '@ds259742.mlab.com:59742/summit-portal',function(err){
+    if(err)
+    console.log("Not Connected!!");
+    else {
+      console.log("Connected to production mongodb!");
+      db = mongoose.connection.db;
+      mongoDriver = mongoose.mongo;
+      gfs = new Gridfs(db, mongoDriver);
+    }
+  });
+} else {
+  mongoose.connect('mongodb://localhost:27017/summit-portal',function(err){
+    if(err)
+    console.log("Not Connected!!");
+    else {
+      console.log("Connected to mongodb!");
+      db = mongoose.connection.db;
+      mongoDriver = mongoose.mongo;
+      gfs = new Gridfs(db, mongoDriver);
+    }
+  });
+}
 
 
 
@@ -50,4 +63,3 @@ router.post('/post',function(req,res){
   });
   return router;
 };
-
