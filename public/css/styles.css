@@ -1,9 +1,9 @@
 .success{
-	color: white;
+	color: green;
 	margin-left: 2%;
 	margin-top: 3%;
 	font-size: 20px;
-	background-color: green;
+	background-color: white;
 	text-align: center;
 }
 
