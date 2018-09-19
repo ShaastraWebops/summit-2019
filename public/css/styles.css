@@ -60,13 +60,14 @@ a:hover {
 .small-logo {
     height: 70px;
     padding-top: 7px;
-    padding-bottom: 7px;
+	padding-bottom: 7px;
 }
 
 .nav-head {
     height: 80px;
     background: #030303;
-    box-shadow: #be202e 0px 1px 6px 1px;
+	box-shadow: #be202e 0px 1px 6px 1px;
+	width: 100vw;
 }
 
 .social {
@@ -91,6 +92,11 @@ a:hover {
 
 .nav-pills .nav-link.nav-item {
     border-radius: 0%;
+}
+
+.nav-pills .show>.nav-link {
+	background-color: #030303;
+	color: #be202e;
 }
 
 .sm-nav-item {
@@ -130,13 +136,13 @@ a:hover {
 }
 
 .title2 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 700;
     color: #be202e;
 }
 
 .text {
-    font-size: 1.25em;
+    font-size: 1em;
 	text-align: justify;
     font-weight: 400;
     color: #030303;
@@ -150,7 +156,9 @@ a:hover {
 body {
     margin-top: 80px;
     background-color: #101010;
-    font-family: 'Ubuntu';
+	font-family: 'Ubuntu';
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 .page-heading {
