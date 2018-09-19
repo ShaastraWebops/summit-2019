@@ -58,13 +58,16 @@ a:hover {
 }
 
 .small-logo {
-    height: 70px;
+	width: 100px;
+	height: auto;
     padding-top: 7px;
 	padding-bottom: 7px;
+
 }
 
 .nav-head {
-    height: 80px;
+	min-height: 80px;
+	height: inherit;
     background: #030303;
 	box-shadow: #be202e 0px 1px 6px 1px;
 	width: 100vw;
@@ -87,7 +90,11 @@ a:hover {
 #sidebarNav {
     height: 100vh;
     position: fixed;
-    background: #030303;
+	background: #030303;
+}
+
+#sidebarNav .nav{
+	overflow-y: scroll;
 }
 
 .nav-pills .nav-link.nav-item {
@@ -139,6 +146,11 @@ a:hover {
     font-size: 2.5em;
     font-weight: 700;
     color: #be202e;
+}
+
+html {
+	width: 100vw;
+	overflow-x: hidden;
 }
 
 .text {
@@ -307,6 +319,7 @@ body {
 	padding-bottom: 10px;
 	padding-left: 25px;
 	padding-right: 25px;
+	width: 150px;
 }
 
 .news-text {
@@ -378,4 +391,10 @@ body {
 	background: url(../img/highlights.png) no-repeat no-repeat;
 	height: inherit;
 	background-size: contain
+}
+
+@media only screen and (max-width: 337px) {
+	body {
+		margin-top: 25vh;
+	}
 }
