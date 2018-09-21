@@ -319,7 +319,7 @@ body {
 	padding-bottom: 10px;
 	padding-left: 25px;
 	padding-right: 25px;
-	width: 150px;
+	width: 190px;
 }
 
 .news-text {
@@ -396,5 +396,11 @@ body {
 @media only screen and (max-width: 337px) {
 	body {
 		margin-top: 25vh;
+	}
+}
+
+@media (max-width: 800px) {
+	.sponsor {
+		width: 150px;
 	}
 }
