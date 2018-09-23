@@ -400,7 +400,11 @@ body {
 }
 
 @media (max-width: 800px) {
+	.small-logo {
+		width: 90px;
+	}
+
 	.sponsor {
-		width: 150px;
+		width: 180px;
 	}
 }
