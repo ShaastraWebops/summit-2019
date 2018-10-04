@@ -2,7 +2,7 @@
 
 angular.module('mainController',[])
 .controller('mainCtrl',function($http, $scope){
-  $scope.registrationsOpen = false;
+  $scope.registrationsOpen = true;
   $scope.viewForm = !$scope.registrationsOpen;
   $scope.showNext = false;
   $scope.user = {};
