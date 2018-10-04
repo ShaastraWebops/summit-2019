@@ -249,7 +249,7 @@ body {
 }
 
 .label{
-	font-variant: small-caps;
+	font-variant: initial;
 	font-size: 1.6em;
 	font-weight: bold;
 }
