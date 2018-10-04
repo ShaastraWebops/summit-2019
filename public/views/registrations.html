@@ -18,6 +18,10 @@
 				Registrations for Summit 2019 are open.
             	<br>
         	</h1>
+          <h2 class="belowsubtitle" data-aos="fade-down">
+      Selection for participation in the SportsTech Summit will be based on the entries to the questions below.
+            <br><br>
+        </h2>
         </center>
         <button type="button" ng-if="!viewForm" class="btn btn-block bg-green label" ng-click="toggleForm()" name="button">View Form</button>
         <br>
@@ -286,7 +290,7 @@
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-block bg-green label" ng-if="showNext" name="button">Submit</button>
-                <p ng-show="!submitError && submitted" class="success">Your information has been successfully recorded!</p>
+                <p ng-show="!submitError && submitted" class="success">Registration complete. You will receive an email regarding your selection soon.</p>
                 <p ng-show="submitError && submitted" ng-bind="submissionStatus" class="help-block">{{submissionStatus}}</p>
               </div>
 	                    </form>
