@@ -74,7 +74,7 @@ app.get('/getusers/:token/:apptype',function(req,res){
       });
 		}
 
-    if(req.params.apptype==="interested"){
+    else if(req.params.apptype==="interested"){
 			user.interested.find({},function(err,students){
 				var fields=['name','email','phone','apptype'];
 				const opts = { fields };
@@ -107,7 +107,7 @@ app.get('/getusers/:token/:apptype',function(req,res){
       });
 		}
 
-		if(req.params.apptype==="sports_pro"){
+		else if(req.params.apptype==="sports_pro"){
 			user.sportsProfessional.find({},function(err,sport_pros){
 				var fields=['name','email','phone','apptype','apptype1','position','company','field','expYear','relLinks','role'];
 				const opts = { fields };
