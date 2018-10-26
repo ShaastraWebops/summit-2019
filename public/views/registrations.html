@@ -67,15 +67,15 @@
 							<div class="form-check form-group">
 								<div class="row">
 									<div class="col-lg-2 col-md-3 col-sm-4 float-left">
-										<input type="radio" class="form-check-input" ng-model="user.occ" value="student" name="apptype" id="student" required>
+										<input type="radio" class="form-check-input" ng-model="user.apptype" value="student" name="apptype" id="student" required>
 										<label class="form-check-label text">Student </label>
 									</div>
 									<div class="col-lg-2 col-md-3 col-sm-4">
-											<input type="radio" class="form-check-input" ng-model="user.occ" value="startup" name="apptype" id="startup" required>
+											<input type="radio" class="form-check-input" ng-model="user.apptype" value="startup" name="apptype" id="startup" required>
 											<label class="form-check-label text">Startup </label>
 									</div>
 									<div class="col-lg-3 col-sm-4 col-md-3 float-right">
-										<input type="radio" class="form-check-input" ng-model="user.occ" value="professional" name="apptype" id="professional;" required>
+										<input type="radio" class="form-check-input" ng-model="user.apptype" value="professional" name="apptype" id="professional;" required>
 										<label class="form-check-label text">Professional </label>
 									</div>
                   <p class="help-block" ng-show="(form.apptype.$error.required) && submitted">
@@ -88,17 +88,17 @@
                 <button type="button" class="btn btn-block bg-green label" ng-click="submitInterested()" ng-if="!registrationsOpen" name="button">Submit</button>
               </div>
 
-              <div ng-if="user.occ === 'student' && showNext">
+              <div ng-if="user.apptype === 'student' && showNext">
                 <div class="form-group">
                     <label for="Year" class="label" style="font-size: 1.2em;">Academic Year</label>
-                    <input class="form-control" type="text" ng-model="user.year" name="Year" placeholder="Enter your current academic year"  required>
+                    <input class="form-control" type="number" ng-model="user.academicYear" name="Year" placeholder="Enter your current academic year"  required>
                     <p class="help-block" ng-show="(form.Year.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="Branch" class="label" style="font-size: 1.2em;">Branch/Stream</label>
-                    <input class="form-control" type="text" ng-model="user.stream" name="Branch" placeholder="Enter your branch or stream"  required>
+                    <input class="form-control" type="text" ng-model="user.branch" name="Branch" placeholder="Enter your branch or stream"  required>
                     <p class="help-block" ng-show="(form.Branch.$error.required) && submitted">
                     This field is required.
                     </p>
@@ -113,82 +113,82 @@
 
                 <div class="form-group">
                     <label for="stud_q1" class="label" style="font-size: 1.2em;">What does Sports Technology mean to you?</label>
-                    <input class="form-control" type="text" ng-model="user.stud_q1" name="stud_q1" required>
+                    <input class="form-control" type="text" ng-model="user.question1" name="stud_q1" required>
                     <p class="help-block" ng-show="(form.stud_q1.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="stud_q2" class="label" style="font-size: 1.2em;">Do you have any experience working in fields that can directly or indirectly be related to sports technology? If yes, please elaborate. </label>
-                    <input class="form-control" type="text" ng-model="user.stud_q2" name="stud_q2" required>
+                    <input class="form-control" type="text" ng-model="user.question2" name="stud_q2" required>
                     <p class="help-block" ng-show="(form.stud_q2.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="stud_q3" class="label" style="font-size: 1.2em;">The SportsTech Summit 2019 includes mainly three tracks: ‘Tech in Action’, ‘Analytics: The Numbers Game’ and ‘Brands, Leagues & Fans’. Which is your favourite track among the three? How has it changed the sporting world in the past and what improvements can be made with it’s help?</label>
-                    <input class="form-control" type="text" ng-model="user.stud_q3" name="stud_q3" required>
+                    <input class="form-control" type="text" ng-model="user.question3" name="stud_q3" required>
                     <p class="help-block" ng-show="(form.stud_q3.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="stud_q4" class="label" style="font-size: 1.2em;">Why do you want to attend the SportsTech Summit 2019?</label>
-                    <input class="form-control" type="text" ng-model="user.stud_q4" name="stud_q4" required>
+                    <input class="form-control" type="text" ng-model="user.question4" name="stud_q4" required>
                     <p class="help-block" ng-show="(form.stud_q4.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
               </div>
 
-              <div ng-if="user.occ === 'startup' && showNext">
+              <div ng-if="user.apptype === 'startup' && showNext">
                 <div class="form-group">
                     <label for="startup_name" class="label" style="font-size: 1.2em;">Startup Name</label>
-                    <input class="form-control" type="text" ng-model="user.startup_name" name="startup_name" placeholder="Enter the name of your startup" required>
+                    <input class="form-control" type="text" ng-model="user.startupName" name="startup_name" placeholder="Enter the name of your startup" required>
                     <p class="help-block" ng-show="(form.startup_name.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="est_year" class="label" style="font-size: 1.2em;">Establishment Year</label>
-                    <input class="form-control" type="number" ng-model="user.est_year" name="est_year" placeholder="Enter the establishment year of your startup" required>
+                    <input class="form-control" type="number" ng-model="user.estYear" name="est_year" placeholder="Enter the establishment year of your startup" required>
                     <p class="help-block" ng-show="(form.est_year.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="links" class="label" style="font-size: 1.2em;">Relevant Links (optional):</label>
-                    <input class="form-control" type="text" ng-model="user.startup_links" name="startup_links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                    <input class="form-control" type="text" ng-model="user.relLinks" name="startup_links" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
                 </div>
 
                 <div class="form-group">
                     <label for="startup_q1" class="label" style="font-size: 1.2em;">What does your startup aim to achieve? How is it related to Sports Technology?</label>
-                    <input class="form-control" type="text" ng-model="user.startup_q1" name="startup_q1" required>
+                    <input class="form-control" type="text" ng-model="user.question1" name="startup_q1" required>
                     <p class="help-block" ng-show="(form.startup_q1.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="startup_q2" class="label" style="font-size: 1.2em;">What do you look to gain from the SportsTech Summit 2019? </label>
-                    <input class="form-control" type="text" ng-model="user.startup_q2" name="startup_q2" required>
+                    <input class="form-control" type="text" ng-model="user.question2" name="startup_q2" required>
                     <p class="help-block" ng-show="(form.startup_q2.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
               </div>
 
-              <div ng-if="user.occ === 'professional' && showNext">
+              <div ng-if="user.apptype === 'professional' && showNext">
                 <div class="form-group">
                     <label for="startup_name" class="label" style="font-size: 1.2em;">Category</label>
                 </div>
                 <div class="form-check form-group">
                   <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4 float-left">
-                      <input type="radio" class="form-check-input" ng-model="user.pro_category" value="sports_pro" name="apptype1" required>
+                      <input type="radio" class="form-check-input" ng-model="user.apptype1" value="sports_pro" name="apptype1" required>
                       <label class="form-check-label text">Sports Technology Professional </label>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-4">
-                        <input type="radio" class="form-check-input" ng-model="user.pro_category" value="other_pro" name="apptype1" required>
+                        <input type="radio" class="form-check-input" ng-model="user.apptype1" value="other_pro" name="apptype1" required>
                         <label class="form-check-label text">Other Professional</label>
 
                     </div>
@@ -197,7 +197,7 @@
                     </p>
                   </div>
                 </div>
-                <div ng-if="user.pro_category === 'sports_pro'">
+                <div ng-if="user.apptype1 === 'sports_pro'">
                   <div class="form-group">
                       <label for="position" class="label" style="font-size: 1.2em;">Position</label>
                       <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position" required>
@@ -221,18 +221,18 @@
                   </div>
                   <div class="form-group">
                       <label for="years" class="label" style="font-size: 1.2em;">Years of Experience</label>
-                      <input class="form-control" type="number" ng-model="user.years" name="years" placeholder="Enter your experience (in years)" required>
+                      <input class="form-control" type="number" ng-model="user.expYear" name="years" placeholder="Enter your experience (in years)" required>
                       <p class="help-block" ng-show="(form.years.$error.required) && submitted">
                       This field is required.
                       </p>
                   </div>
                   <div class="form-group">
                       <label for="links" class="label" style="font-size: 1.2em;">Relevant Links (optional):</label>
-                      <input class="form-control" type="text" ng-model="user.links" name="relLinks" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
+                      <input class="form-control" type="text" ng-model="user.relLinks" name="relLinks" placeholder="Enter relevant links (eg: Website, LinkedIn, etc.)">
                   </div>
               </div>
 
-              <div ng-if="user.pro_category === 'other_pro'">
+              <div ng-if="user.apptype1 === 'other_pro'">
                 <div class="form-group">
                     <label for="position" class="label" style="font-size: 1.2em;">Position</label>
                     <input class="form-control" type="text" ng-model="user.position" name="position" placeholder="Enter your position" required>
@@ -256,7 +256,7 @@
                 </div>
                 <div class="form-group">
                     <label for="years" class="label" style="font-size: 1.2em;">Years of Experience</label>
-                    <input class="form-control" type="number" ng-model="user.years" name="years" placeholder="Enter your experience (in years)" required>
+                    <input class="form-control" type="number" ng-model="user.expYear" name="years" placeholder="Enter your experience (in years)" required>
                     <p class="help-block" ng-show="(form.years.$error.required) && submitted">
                     This field is required.
                     </p>
@@ -264,21 +264,21 @@
 
                 <div class="form-group">
                     <label for="pro_q1" class="label" style="font-size: 1.2em;">Do you have any experience working in fields related to Sports Technology? If yes, please elaborate.</label>
-                    <input class="form-control" type="text" ng-model="user.pro_q1" name="pro_q1" required>
+                    <input class="form-control" type="text" ng-model="user.question1" name="pro_q1" required>
                       <p class="help-block" ng-show="(form.pro_q1.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="pro_q2" class="label" style="font-size: 1.2em;">Can your field of work contribute to advancement in Sports Technology? If yes, please elaborate. </label>
-                    <input class="form-control" type="text" ng-model="user.pro_q2" name="pro_q2" required>
+                    <input class="form-control" type="text" ng-model="user.question2" name="pro_q2" required>
                     <p class="help-block" ng-show="(form.pro_q2.$error.required) && submitted">
                     This field is required.
                     </p>
                 </div>
                 <div class="form-group">
                     <label for="pro_q3" class="label" style="font-size: 1.2em;">Why do you want to attend the SportsTech Summit 2019?</label>
-                    <input class="form-control" type="text" ng-model="user.pro_q3" name="pro_q3" required>
+                    <input class="form-control" type="text" ng-model="user.question3" name="pro_q3" required>
                     <p class="help-block" ng-show="(form.pro_q3.$error.required) && submitted">
                     This field is required.
                     </p>

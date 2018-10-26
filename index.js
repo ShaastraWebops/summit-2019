@@ -54,9 +54,7 @@ app.post('/addInterested',function(req,res){
 
 });
 
-app.get('/getusers/:token/:apptype',function(req,res){
-	if(req.params.token===process.env.TOKEN){
-
+app.get('/getusers/:apptype',function(req,res){
 		if(req.params.apptype==="students"){
 			user.student.find({},function(err,students){
 				var fields=['name','email','phone','apptype','academicYear','branch','institute','question1','question2','question3','question4','role'];
@@ -91,7 +89,7 @@ app.get('/getusers/:token/:apptype',function(req,res){
       });
 		}
 
-		if(req.params.apptype==="startup"){
+		else if(req.params.apptype==="startup"){
 			user.startup.find({},function(err,startups){
 				var fields=['name','email','phone','apptype','startupName','estYear','relLinks','question1','question2','role'];
 				const opts = { fields };
@@ -138,11 +136,6 @@ app.get('/getusers/:token/:apptype',function(req,res){
                   });
       });
 		}
-
-		}
-	else{
-		res.json(null);
-	}
 })
 
 app.listen(port,function(){
