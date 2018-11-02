@@ -1,4 +1,12 @@
-.success{
+.modal-content {
+	color: #be202e;
+}
+
+.modal-content a {
+	color: #030303;
+}
+
+.success {
 	color: green;
 	margin-left: 2%;
 	margin-top: 3%;
@@ -7,60 +15,60 @@
 	text-align: center;
 }
 
-.help-block{
-	color:red;
+.help-block {
+	color: red;
 	margin-left: 2%;
-	margin-top:1%;
-	font-size:20px;
+	margin-top: 1%;
+	font-size: 20px;
 }
 
 .nav-link {
-    font-weight: 800;
-    font-variant: small-caps;
-    font-size: 1.25em;
-    color: #be202e;
-    padding: 20px;
+	font-weight: 800;
+	font-variant: small-caps;
+	font-size: 1.25em;
+	color: #be202e;
+	padding: 20px;
 }
 
 .big-logo {
 	padding-top: 25px;
-    width: 100%;
+	width: 100%;
 	height: auto;
 }
 
 .big-logo-div {
-    background: #be202e;
-    height: inherit;
+	background: #be202e;
+	height: inherit;
 }
 
 .lg-nav-item {
-    padding-left: 5px;
-    padding-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #be202e;
+	text-decoration: none;
+	color: #be202e;
 }
 
 .lg-nav-item:hover {
-    border-bottom: 3px solid #be202e;
+	border-bottom: 3px solid #be202e;
 }
 
 .lg-nav-item {
-    border-bottom: 3px solid #030303;
-    height: 70px;
+	border-bottom: 3px solid #030303;
+	height: 70px;
 }
 
 .fab {
-    font-size: 1.25em;
+	font-size: 1.25em;
 	padding-right: 5px;
 }
 
 .small-logo {
 	width: 100px;
 	height: auto;
-    padding-top: 7px;
+	padding-top: 7px;
 	padding-bottom: 7px;
 
 }
@@ -68,37 +76,37 @@ a:hover {
 .nav-head {
 	min-height: 80px;
 	height: inherit;
-    background: #030303;
+	background: #030303;
 	box-shadow: #be202e 0px 1px 6px 1px;
 	width: 100vw;
 }
 
 .social {
-    padding-bottom: 5px;
-    padding-top: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 
-.social a{
+.social a {
 	color: #be202e;
 }
 
 .fas {
-    font-size: 1.6em;
-    color: #be202e;
+	font-size: 1.6em;
+	color: #be202e;
 }
 
 #sidebarNav {
-    height: 100vh;
-    position: fixed;
+	height: 100vh;
+	position: fixed;
 	background: #030303;
 }
 
-#sidebarNav .nav{
+#sidebarNav .nav {
 	overflow-y: scroll;
 }
 
 .nav-pills .nav-link.nav-item {
-    border-radius: 0%;
+	border-radius: 0%;
 }
 
 .nav-pills .show>.nav-link {
@@ -107,23 +115,23 @@ a:hover {
 }
 
 .sm-nav-item {
-    border-bottom: 3px solid #030303;
+	border-bottom: 3px solid #030303;
 	margin-left: 10vw;
 	margin-right: 5vw
 }
 
 .sm-nav-item:hover {
-    border-bottom: 3px solid #be202e;
+	border-bottom: 3px solid #be202e;
 }
 
-.banner{
+.banner {
 	background: url(../img/home2.png) center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 90vh;
 }
 
-.banner-small{
+.banner-small {
 	background: url(../img/home2.png) center center;
 	background-size: cover;
 	min-height: 50vw;
@@ -131,27 +139,27 @@ a:hover {
 }
 
 .title {
-    font-weight: 900;
-    color: #be202e;
-    font-size: 3.75em;
+	font-weight: 900;
+	color: #be202e;
+	font-size: 3.75em;
 }
 
 .subtitle {
-    font-size: 2.25em;
-    color: #be202e;
-    font-weight: 600;
+	font-size: 2.25em;
+	color: #be202e;
+	font-weight: 600;
 }
 
 .belowsubtitle {
-    font-size: 1.25em;
-    color: white;
-    font-weight: 300;
+	font-size: 1.25em;
+	color: white;
+	font-weight: 300;
 }
 
 .title2 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #be202e;
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #be202e;
 }
 
 html {
@@ -160,117 +168,117 @@ html {
 }
 
 .text {
-    font-size: 1em;
+	font-size: 1em;
 	text-align: justify;
-    font-weight: 400;
-    color: #030303;
+	font-weight: 400;
+	color: #030303;
 }
 
 .card-custom-small {
-    width: 300px;
-    align-items: center;
+	width: 300px;
+	align-items: center;
 }
 
 body {
-    margin-top: 80px;
-    background-color: #101010;
+	margin-top: 80px;
+	background-color: #101010;
 	font-family: 'Ubuntu';
 	width: 100vw;
 	overflow-x: hidden;
 }
 
 .page-heading {
-    font-weight: 700;
-    font-size: 4.5em;
-    text-align: center;
-    color: #030303;
+	font-weight: 700;
+	font-size: 4.5em;
+	text-align: center;
+	color: #030303;
 }
 
 .custom-border-radius {
-    border-radius: 15px;
+	border-radius: 15px;
 }
 
 .demo-square-short {
-    height: 300px;
-    width: 100%;
-    background-color: #030303;
+	height: 300px;
+	width: 100%;
+	background-color: #030303;
 }
 
 .demo-square-tall {
-    height: 400px;
-    width: 100%;
-    background: #030303;
+	height: 400px;
+	width: 100%;
+	background: #030303;
 }
 
 .bg-purple {
-    background: #101010;
+	background: #101010;
 }
 
 .bg-green {
-    background: #be202e;
+	background: #be202e;
 }
 
 .tx-green {
-    color: #be202e;
+	color: #be202e;
 }
 
 .tx-purple {
-    color: #030303;
+	color: #030303;
 }
 
-.reg-div{
+.reg-div {
 	min-height: 60vh;
 	padding-top: 5vh;
 	padding-bottom: 5vh;
 }
 
-.footer{
+.footer {
 	min-height: 250px;
 	box-shadow: #be202e 0px 1px 6px 1px;
 	background: #000000;
 }
 
-.footer-text{
+.footer-text {
 	font-weight: 600;
 }
 
-.footer-info{
+.footer-info {
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
 
-.contact-img2{
+.contact-img2 {
 	background: url(../img/Siddharth.jpg) center top;
 	background-size: cover;
 }
 
-.contact-img1{
+.contact-img1 {
 	background: url(../img/Sanjeev.jpg) right top;
 	background-size: cover;
 }
 
-.contact-img3{
+.contact-img3 {
 	background: url(../img/Varun.jpg) center top;
 	background-size: cover;
 }
 
-.label{
+.label {
 	font-variant: initial;
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
-.focus1{
+.focus1 {
 	background: url(../img/focus1.jpg) left top;
 	background-size: cover;
 }
 
-.focus2{
+.focus2 {
 	background: url(../img/focus2.jpg) left top;
 	background-size: cover;
 }
 
-.focus3{
+.focus3 {
 	background: url(../img/focus3.jpg) left top;
 	background-size: cover;
 }
@@ -286,41 +294,41 @@ body {
 	background-size: cover;
 }
 
-.news{
+.news {
 	height: 225px;
 }
 
-.maker-img{
+.maker-img {
 	background: url(../img/makers.jpg) center bottom;
 	background-size: cover;
 }
 
-.green-energy-img{
+.green-energy-img {
 	background: url(../img/green-energy.jpg) center center;
 	background-size: cover;
 }
 
-.accessibility-img{
+.accessibility-img {
 	background: url(../img/accessibility.jpg) center center;
 	background-size: cover;
 }
 
-.shaastra-main-img{
+.shaastra-main-img {
 	background: url(../img/shaastra-main.jpg) center center;
 	background-size: cover;
 }
 
-.summit-main-img{
+.summit-main-img {
 	background: url(../img/summit-main.jpg) center center;
 	background-size: cover;
 }
 
-.summit-big{
+.summit-big {
 	padding-bottom: 25px;
 	padding-top: 40px;
 }
 
-.sponsor{
+.sponsor {
 	padding-top: 15px;
 	padding-bottom: 10px;
 	padding-left: 25px;
@@ -330,41 +338,41 @@ body {
 
 .news-text {
 	font-size: 1.25em;
-    font-weight: 400;
-    color: #030303;
+	font-weight: 400;
+	color: #030303;
 }
 
-.news-6{
+.news-6 {
 	background: url(../img/news6.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.news-3{
+.news-3 {
 	background: url(../img/news3.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.news-4{
+.news-4 {
 	background: url(../img/news4.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.news-5{
+.news-5 {
 	background: url(../img/news5.jpg) center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
-.news-1{
+.news-1 {
 	background: url(../img/news1.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.news-2{
+.news-2 {
 	background: url(../img/news2.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
